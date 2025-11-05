@@ -1,0 +1,504 @@
+// Eerie Escapes Database Schema
+// PostgreSQL + Prisma ORM
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// USER MANAGEMENT
+// ============================================
+
+enum UserRole {
+  USER
+  PARTNER
+  ADMIN
+}
+
+enum AuthProvider {
+  EMAIL
+  GOOGLE
+  FACEBOOK
+}
+
+model User {
+  id            String        @id @default(uuid())
+  email         String        @unique
+  emailVerified DateTime?
+  password      String?       // Null for OAuth users
+  firstName     String?
+  lastName      String?
+  displayName   String?
+  avatar        String?
+  phone         String?
+  dateOfBirth   DateTime?
+  role          UserRole      @default(USER)
+  authProvider  AuthProvider  @default(EMAIL)
+  
+  // Preferences
+  newsletter    Boolean       @default(false)
+  notifications Boolean       @default(true)
+  currency      String        @default("USD")
+  language      String        @default("en")
+  
+  // Metadata
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  lastLoginAt   DateTime?
+  isActive      Boolean       @default(true)
+  
+  // Relations
+  bookings      Booking[]
+  reviews       Review[]
+  savedHolidays SavedHoliday[]
+  partner       Partner?
+  sessions      Session[]
+  
+  @@index([email])
+  @@index([role])
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  userId       String
+  token        String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([token])
+  @@map("sessions")
+}
+
+// ============================================
+// HOLIDAY/EXPERIENCE MANAGEMENT
+// ============================================
+
+enum HolidayTheme {
+  HAUNTED_TOURS
+  CRIME_SCENES
+  PARANORMAL
+  DARK_HISTORY
+  MACABRE_FESTIVALS
+  HORROR_ATTRACTIONS
+  SUPERNATURAL
+  GOTHIC_ARCHITECTURE
+  CEMETERY_TOURS
+  OCCULT_EXPERIENCES
+}
+
+enum DifficultyLevel {
+  EASY
+  MODERATE
+  CHALLENGING
+  EXTREME
+}
+
+enum HolidayStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+  SOLD_OUT
+}
+
+model Holiday {
+  id              String          @id @default(uuid())
+  slug            String          @unique
+  title           String
+  subtitle        String?
+  description     String          @db.Text
+  shortDescription String?        @db.Text
+  
+  // Classification
+  theme           HolidayTheme
+  difficulty      DifficultyLevel
+  status          HolidayStatus   @default(DRAFT)
+  
+  // Location
+  country         String
+  city            String
+  region          String?
+  address         String?
+  latitude        Float?
+  longitude       Float?
+  
+  // Pricing
+  basePrice       Decimal         @db.Decimal(10, 2)
+  currency        String          @default("USD")
+  discountPrice   Decimal?        @db.Decimal(10, 2)
+  installmentAvailable Boolean    @default(false)
+  
+  // Duration & Capacity
+  durationDays    Int
+  durationNights  Int
+  minParticipants Int             @default(1)
+  maxParticipants Int
+  
+  // Dates
+  startDate       DateTime?
+  endDate         DateTime?
+  isYearRound     Boolean         @default(false)
+  
+  // Media
+  coverImage      String
+  images          String[]        @default([])
+  videoUrl        String?
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+  keywords        String[]        @default([])
+  
+  // Stats
+  viewCount       Int             @default(0)
+  bookingCount    Int             @default(0)
+  averageRating   Float           @default(0)
+  reviewCount     Int             @default(0)
+  
+  // Metadata
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  publishedAt     DateTime?
+  
+  // Relations
+  partnerId       String?
+  partner         Partner?        @relation(fields: [partnerId], references: [id])
+  itinerary       Itinerary[]
+  inclusions      Inclusion[]
+  exclusions      Exclusion[]
+  bookings        Booking[]
+  reviews         Review[]
+  savedBy         SavedHoliday[]
+  availability    Availability[]
+  
+  @@index([slug])
+  @@index([theme])
+  @@index([country, city])
+  @@index([status])
+  @@index([partnerId])
+  @@map("holidays")
+}
+
+model Itinerary {
+  id          String   @id @default(uuid())
+  holidayId   String
+  day         Int
+  title       String
+  description String   @db.Text
+  activities  String[] @default([])
+  meals       String[] @default([])
+  
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  @@index([holidayId])
+  @@map("itineraries")
+}
+
+model Inclusion {
+  id          String   @id @default(uuid())
+  holidayId   String
+  item        String
+  description String?
+  
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  @@index([holidayId])
+  @@map("inclusions")
+}
+
+model Exclusion {
+  id          String   @id @default(uuid())
+  holidayId   String
+  item        String
+  description String?
+  
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  @@index([holidayId])
+  @@map("exclusions")
+}
+
+model Availability {
+  id          String   @id @default(uuid())
+  holidayId   String
+  date        DateTime
+  spotsLeft   Int
+  isAvailable Boolean  @default(true)
+  
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  @@unique([holidayId, date])
+  @@index([holidayId])
+  @@index([date])
+  @@map("availability")
+}
+
+// ============================================
+// BOOKING MANAGEMENT
+// ============================================
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  PARTIALLY_PAID
+  FAILED
+  REFUNDED
+}
+
+model Booking {
+  id              String        @id @default(uuid())
+  bookingNumber   String        @unique
+  
+  // Relations
+  userId          String
+  holidayId       String
+  user            User          @relation(fields: [userId], references: [id])
+  holiday         Holiday       @relation(fields: [holidayId], references: [id])
+  
+  // Booking Details
+  startDate       DateTime
+  endDate         DateTime
+  participants    Int
+  
+  // Pricing
+  totalPrice      Decimal       @db.Decimal(10, 2)
+  currency        String        @default("USD")
+  
+  // Status
+  bookingStatus   BookingStatus @default(PENDING)
+  paymentStatus   PaymentStatus @default(PENDING)
+  
+  // Contact Info
+  contactName     String
+  contactEmail    String
+  contactPhone    String
+  
+  // Special Requests
+  specialRequests String?       @db.Text
+  dietaryNeeds    String?
+  
+  // Metadata
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  confirmedAt     DateTime?
+  cancelledAt     DateTime?
+  
+  // Relations
+  payments        Payment[]
+  
+  @@index([userId])
+  @@index([holidayId])
+  @@index([bookingNumber])
+  @@index([bookingStatus])
+  @@map("bookings")
+}
+
+model Payment {
+  id              String        @id @default(uuid())
+  bookingId       String
+  
+  amount          Decimal       @db.Decimal(10, 2)
+  currency        String        @default("USD")
+  
+  // Payment Provider (Stripe)
+  stripePaymentId String?       @unique
+  paymentMethod   String?       // card, bank_transfer, etc.
+  
+  status          PaymentStatus @default(PENDING)
+  
+  // Installment Info
+  isInstallment   Boolean       @default(false)
+  installmentNumber Int?
+  totalInstallments Int?
+  
+  // Metadata
+  createdAt       DateTime      @default(now())
+  paidAt          DateTime?
+  
+  booking         Booking       @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  
+  @@index([bookingId])
+  @@index([stripePaymentId])
+  @@map("payments")
+}
+
+// ============================================
+// REVIEW SYSTEM
+// ============================================
+
+model Review {
+  id          String   @id @default(uuid())
+  
+  // Relations
+  userId      String
+  holidayId   String
+  user        User     @relation(fields: [userId], references: [id])
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  // Rating (1-5 stars)
+  rating      Int      // 1-5
+  
+  // Review Content
+  title       String?
+  content     String   @db.Text
+  
+  // Verification
+  isVerified  Boolean  @default(false) // Verified purchase
+  
+  // Helpful votes
+  helpfulCount Int     @default(0)
+  
+  // Metadata
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@unique([userId, holidayId]) // One review per user per holiday
+  @@index([holidayId])
+  @@index([rating])
+  @@map("reviews")
+}
+
+// ============================================
+// PARTNER MANAGEMENT
+// ============================================
+
+enum PartnerStatus {
+  PENDING
+  APPROVED
+  SUSPENDED
+  REJECTED
+}
+
+model Partner {
+  id              String        @id @default(uuid())
+  
+  // User Relation (One-to-One)
+  userId          String        @unique
+  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // Company Info
+  companyName     String
+  companyLogo     String?
+  description     String?       @db.Text
+  website         String?
+  
+  // Contact
+  businessEmail   String
+  businessPhone   String
+  
+  // Address
+  country         String
+  city            String
+  address         String
+  postalCode      String
+  
+  // Verification
+  status          PartnerStatus @default(PENDING)
+  verifiedAt      DateTime?
+  
+  // Commission
+  commissionRate  Decimal       @db.Decimal(5, 2) @default(15.00) // Percentage
+  
+  // Metadata
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  
+  // Relations
+  holidays        Holiday[]
+  
+  @@index([status])
+  @@map("partners")
+}
+
+// ============================================
+// SAVED HOLIDAYS (WISHLIST)
+// ============================================
+
+model SavedHoliday {
+  id          String   @id @default(uuid())
+  userId      String
+  holidayId   String
+  
+  createdAt   DateTime @default(now())
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  holiday     Holiday  @relation(fields: [holidayId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, holidayId])
+  @@index([userId])
+  @@map("saved_holidays")
+}
+
+// ============================================
+// NEWSLETTER & CONTACT
+// ============================================
+
+model Newsletter {
+  id          String   @id @default(uuid())
+  email       String   @unique
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  
+  @@index([email])
+  @@map("newsletter")
+}
+
+model ContactMessage {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  subject     String
+  message     String   @db.Text
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  
+  @@index([isRead])
+  @@map("contact_messages")
+}
+
+// ============================================
+// ANALYTICS & TRACKING
+// ============================================
+
+model SearchLog {
+  id          String   @id @default(uuid())
+  userId      String?
+  query       String
+  filters     Json?
+  resultsCount Int
+  createdAt   DateTime @default(now())
+  
+  @@index([createdAt])
+  @@map("search_logs")
+}
+
+model PageView {
+  id          String   @id @default(uuid())
+  userId      String?
+  holidayId   String?
+  page        String
+  referrer    String?
+  userAgent   String?
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+  
+  @@index([holidayId])
+  @@index([createdAt])
+  @@map("page_views")
+}
