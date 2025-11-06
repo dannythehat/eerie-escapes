@@ -1,5 +1,8 @@
 import HeroSection from '@/components/HeroSection';
 import FeaturedHolidaysCarousel from '@/components/FeaturedHolidaysCarousel';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import NewsletterSection from '@/components/NewsletterSection';
 
 // Mock data for featured holidays (replace with API call)
 const featuredHolidays = [
@@ -84,7 +87,14 @@ export default function HomePage() {
       {/* Featured Holidays Carousel */}
       <FeaturedHolidaysCarousel holidays={featuredHolidays} />
 
-      {/* Additional sections will be added in Day 12 */}
+      {/* How It Works Section */}
+      <HowItWorksSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Newsletter Section */}
+      <NewsletterSection />
     </main>
   );
 }
