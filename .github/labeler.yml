@@ -1,0 +1,33 @@
+# PR Labeler Configuration
+# Automatically labels PRs based on changed files
+
+frontend:
+  - frontend/**/*
+
+backend:
+  - backend/**/*
+
+documentation:
+  - '**/*.md'
+  - docs/**/*
+
+ci/cd:
+  - .github/**/*
+  - docker-compose.yml
+  - '**/Dockerfile*'
+
+tests:
+  - '**/*.test.*'
+  - '**/*.spec.*'
+  - '**/__tests__/**/*'
+
+dependencies:
+  - '**/package.json'
+  - '**/package-lock.json'
+
+database:
+  - backend/prisma/**/*
+
+automation:
+  - automation/**/*
+  - scripts/**/*
