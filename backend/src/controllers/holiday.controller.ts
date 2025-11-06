@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PrismaClient, HolidayTheme, HolidayStatus } from '@prisma/client';
+import { PrismaClient, HolidayTheme, HolidayStatus, DifficultyLevel } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -14,7 +14,30 @@ const generateSlug = (title: string): string => {
 };
 
 /**
- * Get all holidays with pagination and filtering
+ * Track search analytics
+ */
+const trackSearchAnalytics = async (
+  searchTerm: string,
+  resultsCount: number,
+  filters: any,
+  userId?: string
+) => {
+  try {
+    await prisma.searchAnalytics.create({
+      data: {
+        searchTerm: searchTerm.toLowerCase(),
+        resultsCount,
+        filters: JSON.stringify(filters),
+        userId,
+      },
+    });
+  } catch (error) {
+    console.error('Failed to track search analytics:', error);
+  }
+};
+
+/**
+ * Get all holidays with pagination, filtering, and sorting
  * GET /api/v1/holidays
  */
 export const getAllHolidays = async (req: Request, res: Response) => {
@@ -25,7 +48,21 @@ export const getAllHolidays = async (req: Request, res: Response) => {
     const skip = (page - 1) * limit;
 
     // Filters
-    const { country, city, theme, startDate, endDate, minPrice, maxPrice, status } = req.query;
+    const { 
+      country, 
+      city, 
+      theme, 
+      difficulty,
+      startDate, 
+      endDate, 
+      minPrice, 
+      maxPrice,
+      minDuration,
+      maxDuration,
+      status,
+      sortBy = 'createdAt',
+      sortOrder = 'desc'
+    } = req.query;
 
     // Build where clause
     const where: any = {};
@@ -41,6 +78,11 @@ export const getAllHolidays = async (req: Request, res: Response) => {
     // Theme filter
     if (theme && Object.values(HolidayTheme).includes(theme as HolidayTheme)) {
       where.theme = theme as HolidayTheme;
+    }
+
+    // Difficulty filter
+    if (difficulty && Object.values(DifficultyLevel).includes(difficulty as DifficultyLevel)) {
+      where.difficulty = difficulty as DifficultyLevel;
     }
 
     // Date range filter
@@ -75,11 +117,43 @@ export const getAllHolidays = async (req: Request, res: Response) => {
       }
     }
 
+    // Duration filter
+    if (minDuration || maxDuration) {
+      where.durationDays = {};
+      if (minDuration) {
+        where.durationDays.gte = parseInt(minDuration as string);
+      }
+      if (maxDuration) {
+        where.durationDays.lte = parseInt(maxDuration as string);
+      }
+    }
+
     // Status filter (default to PUBLISHED for public API)
     if (status && Object.values(HolidayStatus).includes(status as HolidayStatus)) {
       where.status = status as HolidayStatus;
     } else {
       where.status = HolidayStatus.PUBLISHED;
+    }
+
+    // Build orderBy clause
+    const orderBy: any = {};
+    const validSortFields = [
+      'createdAt', 
+      'updatedAt', 
+      'publishedAt',
+      'basePrice', 
+      'averageRating', 
+      'reviewCount',
+      'bookingCount',
+      'viewCount',
+      'durationDays',
+      'title'
+    ];
+
+    if (validSortFields.includes(sortBy as string)) {
+      orderBy[sortBy as string] = sortOrder === 'asc' ? 'asc' : 'desc';
+    } else {
+      orderBy.createdAt = 'desc';
     }
 
     // Execute query with pagination
@@ -88,7 +162,7 @@ export const getAllHolidays = async (req: Request, res: Response) => {
         where,
         skip,
         take: limit,
-        orderBy: { createdAt: 'desc' },
+        orderBy,
         select: {
           id: true,
           slug: true,
@@ -108,6 +182,7 @@ export const getAllHolidays = async (req: Request, res: Response) => {
           coverImage: true,
           averageRating: true,
           reviewCount: true,
+          bookingCount: true,
           startDate: true,
           endDate: true,
           isYearRound: true,
@@ -129,6 +204,18 @@ export const getAllHolidays = async (req: Request, res: Response) => {
         totalPages,
         hasNextPage: page < totalPages,
         hasPrevPage: page > 1,
+      },
+      filters: {
+        country,
+        city,
+        theme,
+        difficulty,
+        minPrice,
+        maxPrice,
+        minDuration,
+        maxDuration,
+        sortBy,
+        sortOrder,
       },
     });
   } catch (error) {
@@ -219,12 +306,27 @@ export const getHolidayById = async (req: Request, res: Response) => {
 };
 
 /**
- * Search holidays with full-text search
+ * Advanced search holidays with full-text search, filters, and relevance scoring
  * GET /api/v1/holidays/search
  */
 export const searchHolidays = async (req: Request, res: Response) => {
   try {
-    const { q, page = 1, limit = 10 } = req.query;
+    const { 
+      q, 
+      page = 1, 
+      limit = 10,
+      theme,
+      difficulty,
+      country,
+      city,
+      minPrice,
+      maxPrice,
+      minDuration,
+      maxDuration,
+      minRating,
+      sortBy = 'relevance',
+      sortOrder = 'desc'
+    } = req.query;
 
     if (!q || typeof q !== 'string') {
       return res.status(400).json({
@@ -237,51 +339,166 @@ export const searchHolidays = async (req: Request, res: Response) => {
     const limitNum = parseInt(limit as string);
     const skip = (pageNum - 1) * limitNum;
 
-    const searchTerm = q.toLowerCase();
+    const searchTerm = q.toLowerCase().trim();
+    const searchWords = searchTerm.split(/\s+/);
 
+    // Build where clause with filters
+    const where: any = {
+      status: HolidayStatus.PUBLISHED,
+      AND: [],
+    };
+
+    // Full-text search across multiple fields
+    const searchConditions = {
+      OR: [
+        { title: { contains: searchTerm, mode: 'insensitive' } },
+        { description: { contains: searchTerm, mode: 'insensitive' } },
+        { shortDescription: { contains: searchTerm, mode: 'insensitive' } },
+        { city: { contains: searchTerm, mode: 'insensitive' } },
+        { country: { contains: searchTerm, mode: 'insensitive' } },
+        { region: { contains: searchTerm, mode: 'insensitive' } },
+        // Search for individual words
+        ...searchWords.map(word => ({
+          OR: [
+            { title: { contains: word, mode: 'insensitive' } },
+            { description: { contains: word, mode: 'insensitive' } },
+            { keywords: { has: word } },
+          ]
+        }))
+      ]
+    };
+
+    where.AND.push(searchConditions);
+
+    // Apply additional filters
+    if (theme && Object.values(HolidayTheme).includes(theme as HolidayTheme)) {
+      where.theme = theme as HolidayTheme;
+    }
+
+    if (difficulty && Object.values(DifficultyLevel).includes(difficulty as DifficultyLevel)) {
+      where.difficulty = difficulty as DifficultyLevel;
+    }
+
+    if (country) {
+      where.country = { contains: country as string, mode: 'insensitive' };
+    }
+
+    if (city) {
+      where.city = { contains: city as string, mode: 'insensitive' };
+    }
+
+    // Price range filter
+    if (minPrice || maxPrice) {
+      where.basePrice = {};
+      if (minPrice) {
+        where.basePrice.gte = parseFloat(minPrice as string);
+      }
+      if (maxPrice) {
+        where.basePrice.lte = parseFloat(maxPrice as string);
+      }
+    }
+
+    // Duration filter
+    if (minDuration || maxDuration) {
+      where.durationDays = {};
+      if (minDuration) {
+        where.durationDays.gte = parseInt(minDuration as string);
+      }
+      if (maxDuration) {
+        where.durationDays.lte = parseInt(maxDuration as string);
+      }
+    }
+
+    // Rating filter
+    if (minRating) {
+      where.averageRating = { gte: parseFloat(minRating as string) };
+    }
+
+    // Build orderBy clause
+    let orderBy: any = {};
+    
+    if (sortBy === 'relevance') {
+      // For relevance, we'll sort by multiple factors
+      orderBy = [
+        { averageRating: 'desc' },
+        { reviewCount: 'desc' },
+        { bookingCount: 'desc' },
+      ];
+    } else if (sortBy === 'popularity') {
+      orderBy = [
+        { bookingCount: 'desc' },
+        { viewCount: 'desc' },
+        { reviewCount: 'desc' },
+      ];
+    } else if (sortBy === 'price') {
+      orderBy = { basePrice: sortOrder === 'asc' ? 'asc' : 'desc' };
+    } else if (sortBy === 'rating') {
+      orderBy = [
+        { averageRating: sortOrder === 'asc' ? 'asc' : 'desc' },
+        { reviewCount: 'desc' },
+      ];
+    } else if (sortBy === 'date') {
+      orderBy = { publishedAt: sortOrder === 'asc' ? 'asc' : 'desc' };
+    } else if (sortBy === 'duration') {
+      orderBy = { durationDays: sortOrder === 'asc' ? 'asc' : 'desc' };
+    } else {
+      orderBy = { averageRating: 'desc' };
+    }
+
+    // Execute search query
     const [holidays, total] = await Promise.all([
       prisma.holiday.findMany({
-        where: {
-          status: HolidayStatus.PUBLISHED,
-          OR: [
-            { title: { contains: searchTerm, mode: 'insensitive' } },
-            { description: { contains: searchTerm, mode: 'insensitive' } },
-            { city: { contains: searchTerm, mode: 'insensitive' } },
-            { country: { contains: searchTerm, mode: 'insensitive' } },
-          ],
-        },
+        where,
         skip,
         take: limitNum,
-        orderBy: { averageRating: 'desc' },
+        orderBy,
         select: {
           id: true,
           slug: true,
           title: true,
           shortDescription: true,
           theme: true,
+          difficulty: true,
           country: true,
           city: true,
+          region: true,
           basePrice: true,
           currency: true,
+          discountPrice: true,
+          durationDays: true,
+          durationNights: true,
           coverImage: true,
           averageRating: true,
           reviewCount: true,
+          bookingCount: true,
+          viewCount: true,
         },
       }),
-      prisma.holiday.count({
-        where: {
-          status: HolidayStatus.PUBLISHED,
-          OR: [
-            { title: { contains: searchTerm, mode: 'insensitive' } },
-            { description: { contains: searchTerm, mode: 'insensitive' } },
-            { city: { contains: searchTerm, mode: 'insensitive' } },
-            { country: { contains: searchTerm, mode: 'insensitive' } },
-          ],
-        },
-      }),
+      prisma.holiday.count({ where }),
     ]);
 
     const totalPages = Math.ceil(total / limitNum);
+
+    // Track search analytics asynchronously
+    const filters = {
+      theme,
+      difficulty,
+      country,
+      city,
+      minPrice,
+      maxPrice,
+      minDuration,
+      maxDuration,
+      minRating,
+      sortBy,
+    };
+    
+    trackSearchAnalytics(
+      searchTerm, 
+      total, 
+      filters,
+      req.user?.id
+    ).catch(err => console.error('Analytics tracking failed:', err));
 
     res.json({
       success: true,
@@ -291,6 +508,13 @@ export const searchHolidays = async (req: Request, res: Response) => {
         limit: limitNum,
         total,
         totalPages,
+        hasNextPage: pageNum < totalPages,
+        hasPrevPage: pageNum > 1,
+      },
+      search: {
+        query: q,
+        resultsCount: total,
+        filters,
       },
     });
   } catch (error) {
@@ -298,6 +522,128 @@ export const searchHolidays = async (req: Request, res: Response) => {
     res.status(500).json({
       success: false,
       message: 'Failed to search holidays',
+      error: process.env.NODE_ENV === 'development' ? error : undefined,
+    });
+  }
+};
+
+/**
+ * Get search suggestions based on partial query
+ * GET /api/v1/holidays/search/suggestions
+ */
+export const getSearchSuggestions = async (req: Request, res: Response) => {
+  try {
+    const { q, limit = 5 } = req.query;
+
+    if (!q || typeof q !== 'string' || q.length < 2) {
+      return res.json({
+        success: true,
+        data: [],
+      });
+    }
+
+    const searchTerm = q.toLowerCase().trim();
+    const limitNum = parseInt(limit as string);
+
+    // Get suggestions from titles, cities, and countries
+    const [titleSuggestions, locationSuggestions] = await Promise.all([
+      prisma.holiday.findMany({
+        where: {
+          status: HolidayStatus.PUBLISHED,
+          title: { contains: searchTerm, mode: 'insensitive' },
+        },
+        select: {
+          title: true,
+          slug: true,
+        },
+        take: limitNum,
+        orderBy: { bookingCount: 'desc' },
+      }),
+      prisma.holiday.groupBy({
+        by: ['city', 'country'],
+        where: {
+          status: HolidayStatus.PUBLISHED,
+          OR: [
+            { city: { contains: searchTerm, mode: 'insensitive' } },
+            { country: { contains: searchTerm, mode: 'insensitive' } },
+          ],
+        },
+        take: limitNum,
+      }),
+    ]);
+
+    const suggestions = [
+      ...titleSuggestions.map(h => ({
+        type: 'holiday',
+        text: h.title,
+        slug: h.slug,
+      })),
+      ...locationSuggestions.map(l => ({
+        type: 'location',
+        text: `${l.city}, ${l.country}`,
+      })),
+    ].slice(0, limitNum);
+
+    res.json({
+      success: true,
+      data: suggestions,
+    });
+  } catch (error) {
+    console.error('Error getting search suggestions:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to get search suggestions',
+      error: process.env.NODE_ENV === 'development' ? error : undefined,
+    });
+  }
+};
+
+/**
+ * Get popular search terms
+ * GET /api/v1/holidays/search/popular
+ */
+export const getPopularSearches = async (req: Request, res: Response) => {
+  try {
+    const { limit = 10 } = req.query;
+    const limitNum = parseInt(limit as string);
+
+    const popularSearches = await prisma.searchAnalytics.groupBy({
+      by: ['searchTerm'],
+      _count: {
+        searchTerm: true,
+      },
+      _avg: {
+        resultsCount: true,
+      },
+      orderBy: {
+        _count: {
+          searchTerm: 'desc',
+        },
+      },
+      take: limitNum,
+      where: {
+        createdAt: {
+          gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // Last 30 days
+        },
+        resultsCount: {
+          gt: 0, // Only include searches that returned results
+        },
+      },
+    });
+
+    res.json({
+      success: true,
+      data: popularSearches.map(s => ({
+        term: s.searchTerm,
+        searchCount: s._count.searchTerm,
+        avgResults: Math.round(s._avg.resultsCount || 0),
+      })),
+    });
+  } catch (error) {
+    console.error('Error getting popular searches:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to get popular searches',
       error: process.env.NODE_ENV === 'development' ? error : undefined,
     });
   }
