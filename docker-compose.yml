@@ -15,11 +15,14 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./backend/prisma/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U eerie_user"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - eerie-network
 
   # Redis Cache
   redis:
@@ -29,46 +32,102 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    command: redis-server --appendonly yes
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - eerie-network
 
-  # Backend API (will be added later)
-  # backend:
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile
-  #   container_name: eerie-backend
-  #   ports:
-  #     - "3001:3001"
-  #   environment:
-  #     DATABASE_URL: postgresql://eerie_user:eerie_password@postgres:5432/eerie_escapes_dev
-  #     REDIS_URL: redis://redis:6379
-  #   depends_on:
-  #     - postgres
-  #     - redis
-  #   volumes:
-  #     - ./backend:/app
-  #     - /app/node_modules
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: eerie-backend
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://eerie_user:eerie_password@postgres:5432/eerie_escapes_dev
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev_secret_change_in_production
+      PORT: 3001
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - backend_logs:/app/logs
+    networks:
+      - eerie-network
+    restart: unless-stopped
 
-  # Frontend (will be added later)
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   container_name: eerie-frontend
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     NEXT_PUBLIC_API_URL: http://localhost:3001/api
-  #   depends_on:
-  #     - backend
-  #   volumes:
-  #     - ./frontend:/app
-  #     - /app/node_modules
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: eerie-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_API_URL: http://localhost:3001/api
+      WATCHPACK_POLLING: "true"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - eerie-network
+    restart: unless-stopped
+
+  # pgAdmin (Database Management UI)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: eerie-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@eerieescapes.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - eerie-network
+    restart: unless-stopped
+
+  # Redis Commander (Redis Management UI)
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: eerie-redis-commander
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - eerie-network
+    restart: unless-stopped
 
 volumes:
   postgres_data:
   redis_data:
+  pgadmin_data:
+  backend_logs:
+
+networks:
+  eerie-network:
+    driver: bridge
