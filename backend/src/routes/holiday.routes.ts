@@ -3,6 +3,8 @@ import {
   getAllHolidays,
   getHolidayById,
   searchHolidays,
+  getSearchSuggestions,
+  getPopularSearches,
   createHoliday,
   updateHoliday,
   deleteHoliday,
@@ -20,6 +22,12 @@ import {
 import { UserRole } from '@prisma/client';
 
 const router = Router();
+
+// GET /api/v1/holidays/search/suggestions - Get search suggestions (public)
+router.get('/search/suggestions', getSearchSuggestions);
+
+// GET /api/v1/holidays/search/popular - Get popular searches (public)
+router.get('/search/popular', getPopularSearches);
 
 // GET /api/v1/holidays/search - Search holidays (public)
 router.get('/search', searchHolidays);
