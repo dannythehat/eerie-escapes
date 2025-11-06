@@ -1,24 +1,20 @@
 import { Router } from 'express';
+import {
+  getAllHolidays,
+  getHolidayById,
+  searchHolidays,
+} from '../controllers/holiday.controller';
 
 const router = Router();
 
-// GET /api/v1/holidays - Get all holidays
-router.get('/', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Get all holidays endpoint - Coming in Day 6',
-    data: [],
-  });
-});
+// GET /api/v1/holidays/search - Search holidays
+router.get('/search', searchHolidays);
 
-// GET /api/v1/holidays/:id - Get single holiday
-router.get('/:id', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Get single holiday endpoint - Coming in Day 6',
-    data: null,
-  });
-});
+// GET /api/v1/holidays - Get all holidays with pagination and filters
+router.get('/', getAllHolidays);
+
+// GET /api/v1/holidays/:id - Get single holiday by ID or slug
+router.get('/:id', getHolidayById);
 
 // POST /api/v1/holidays - Create holiday (admin/partner only)
 router.post('/', (req, res) => {
