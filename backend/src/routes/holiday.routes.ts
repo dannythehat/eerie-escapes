@@ -3,44 +3,65 @@ import {
   getAllHolidays,
   getHolidayById,
   searchHolidays,
+  createHoliday,
+  updateHoliday,
+  deleteHoliday,
 } from '../controllers/holiday.controller';
+import { authenticate, authorize, authorizeOwnerOrAdmin } from '../middleware/auth.middleware';
+import {
+  validate,
+  createHolidaySchema,
+  updateHolidaySchema,
+  validatePricing,
+  validateDates,
+  validateDuration,
+  validateParticipants,
+} from '../middleware/validation.middleware';
+import { UserRole } from '@prisma/client';
 
 const router = Router();
 
-// GET /api/v1/holidays/search - Search holidays
+// GET /api/v1/holidays/search - Search holidays (public)
 router.get('/search', searchHolidays);
 
-// GET /api/v1/holidays - Get all holidays with pagination and filters
+// GET /api/v1/holidays - Get all holidays with pagination and filters (public)
 router.get('/', getAllHolidays);
 
-// GET /api/v1/holidays/:id - Get single holiday by ID or slug
+// GET /api/v1/holidays/:id - Get single holiday by ID or slug (public)
 router.get('/:id', getHolidayById);
 
 // POST /api/v1/holidays - Create holiday (admin/partner only)
-router.post('/', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Create holiday endpoint - Coming in Day 7',
-    data: null,
-  });
-});
+router.post(
+  '/',
+  authenticate,
+  authorize(UserRole.ADMIN, UserRole.PARTNER),
+  validate(createHolidaySchema),
+  validatePricing,
+  validateDates,
+  validateDuration,
+  validateParticipants,
+  createHoliday
+);
 
-// PUT /api/v1/holidays/:id - Update holiday
-router.put('/:id', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Update holiday endpoint - Coming in Day 7',
-    data: null,
-  });
-});
+// PUT /api/v1/holidays/:id - Update holiday (admin or owner only)
+router.put(
+  '/:id',
+  authenticate,
+  authorizeOwnerOrAdmin('partnerId'),
+  validate(updateHolidaySchema),
+  validatePricing,
+  validateDates,
+  validateDuration,
+  validateParticipants,
+  updateHoliday
+);
 
-// DELETE /api/v1/holidays/:id - Delete holiday
-router.delete('/:id', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Delete holiday endpoint - Coming in Day 7',
-    data: null,
-  });
-});
+// DELETE /api/v1/holidays/:id - Delete holiday (admin or owner only)
+router.delete(
+  '/:id',
+  authenticate,
+  authorizeOwnerOrAdmin('partnerId'),
+  deleteHoliday
+);
 
 export default router;
