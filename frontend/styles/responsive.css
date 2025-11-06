@@ -1,0 +1,114 @@
+/* Responsive Design Utilities for Eerie Escapes */
+
+/* Mobile First Breakpoints */
+/* sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px */
+
+/* Container responsive padding */
+.container {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive text sizes */
+.text-responsive-xs {
+  @apply text-xs sm:text-sm;
+}
+
+.text-responsive-sm {
+  @apply text-sm sm:text-base;
+}
+
+.text-responsive-base {
+  @apply text-base sm:text-lg;
+}
+
+.text-responsive-lg {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+.text-responsive-xl {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+}
+
+.text-responsive-2xl {
+  @apply text-2xl sm:text-3xl lg:text-4xl;
+}
+
+.text-responsive-3xl {
+  @apply text-3xl sm:text-4xl lg:text-5xl;
+}
+
+/* Responsive spacing */
+.section-padding {
+  @apply py-12 sm:py-16 lg:py-20;
+}
+
+.section-padding-sm {
+  @apply py-8 sm:py-10 lg:py-12;
+}
+
+.section-padding-lg {
+  @apply py-16 sm:py-20 lg:py-28;
+}
+
+/* Responsive grid layouts */
+.grid-responsive-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+}
+
+.grid-responsive-3 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+}
+
+.grid-responsive-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+}
+
+/* Mobile menu utilities */
+.mobile-menu {
+  @apply fixed inset-0 z-50 bg-black/95 backdrop-blur-lg;
+  @apply transform transition-transform duration-300;
+}
+
+.mobile-menu.closed {
+  @apply translate-x-full;
+}
+
+.mobile-menu.open {
+  @apply translate-x-0;
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 768px) {
+  button, a.btn {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  @apply overflow-x-hidden;
+}
+
+/* Responsive images */
+.img-responsive {
+  @apply w-full h-auto;
+}
+
+/* Hide on mobile */
+.hide-mobile {
+  @apply hidden md:block;
+}
+
+/* Show only on mobile */
+.show-mobile {
+  @apply block md:hidden;
+}
+
+/* Responsive flex utilities */
+.flex-responsive {
+  @apply flex flex-col sm:flex-row;
+}
+
+.flex-responsive-reverse {
+  @apply flex flex-col-reverse sm:flex-row;
+}
