@@ -184,6 +184,10 @@ model Holiday {
   @@index([country, city])
   @@index([status])
   @@index([partnerId])
+  @@index([basePrice])
+  @@index([averageRating])
+  @@index([bookingCount])
+  @@index([durationDays])
   @@map("holidays")
 }
 
@@ -394,7 +398,7 @@ model Partner {
   
   // Company Info
   companyName     String
-  companyLogo     String?
+  logo            String?
   description     String?       @db.Text
   website         String?
   
@@ -410,7 +414,9 @@ model Partner {
   
   // Verification
   status          PartnerStatus @default(PENDING)
+  verified        Boolean       @default(false)
   verifiedAt      DateTime?
+  rating          Float         @default(0)
   
   // Commission
   commissionRate  Decimal       @db.Decimal(5, 2) @default(15.00) // Percentage
@@ -476,16 +482,17 @@ model ContactMessage {
 // ANALYTICS & TRACKING
 // ============================================
 
-model SearchLog {
-  id          String   @id @default(uuid())
-  userId      String?
-  query       String
-  filters     Json?
-  resultsCount Int
-  createdAt   DateTime @default(now())
+model SearchAnalytics {
+  id            String   @id @default(uuid())
+  userId        String?
+  searchTerm    String
+  filters       String?  @db.Text // JSON string of applied filters
+  resultsCount  Int
+  createdAt     DateTime @default(now())
   
+  @@index([searchTerm])
   @@index([createdAt])
-  @@map("search_logs")
+  @@map("search_analytics")
 }
 
 model PageView {
