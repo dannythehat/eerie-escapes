@@ -1,0 +1,541 @@
+{
+  "holidays": [
+    {
+      "name": "Whitby Goth Weekend",
+      "slug": "whitby-goth-weekend-england",
+      "location": "Whitby, North Yorkshire, England",
+      "country": "United Kingdom",
+      "theme": "GOTHIC_FESTIVAL",
+      "description": "Join the world's premier Gothic festival in the town that inspired Dracula. This 4-day experience includes the Goth Weekend festival, Dracula tours, Gothic fashion shows, live music, and exploration of Whitby's dark literary history.",
+      "longDescription": "Twice a year, the picturesque seaside town of Whitby transforms into the Gothic capital of the world. This is where Bram Stoker found inspiration for Dracula, and where thousands of Goths, steampunks, and alternative culture enthusiasts gather for the legendary Whitby Goth Weekend. Your experience includes full festival access with live bands, DJs, Gothic markets, and fashion shows. Explore the ruins of Whitby Abbey where Dracula first arrived in England, climb the famous 199 steps to St. Mary's Church, and visit the Dracula Experience museum. Attend talks by Gothic literature experts, participate in Victorian photography sessions, and shop for Gothic fashion, jewelry, and art from vendors worldwide. The town embraces the festival completely—even local shops and pubs get into the Gothic spirit. Evenings feature club nights with Gothic, industrial, and darkwave music, plus the spectacular Bizarre Bazaar marketplace. Whether you're deeply embedded in Gothic culture or simply curious, this festival offers an accepting, creative community celebrating all things dark and beautiful. It's part music festival, part literary pilgrimage, part fashion show, and entirely unforgettable.",
+      "duration": 4,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 20,
+      "price": 899.00,
+      "currency": "GBP",
+      "rating": 4.9,
+      "reviewCount": 678,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9",
+        "https://images.unsplash.com/photo-1555881400-74d7acaacd8b"
+      ],
+      "inclusions": [
+        "4 nights accommodation in Whitby",
+        "Full Goth Weekend festival pass",
+        "All museum and attraction entries",
+        "Dracula walking tour",
+        "Victorian photography session",
+        "Welcome Gothic dinner",
+        "Festival merchandise pack"
+      ],
+      "exclusions": [
+        "Travel to Whitby",
+        "Most meals",
+        "Gothic clothing/costumes",
+        "Personal purchases",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Festival Opening",
+          "description": "Afternoon arrival and check-in, evening festival opening ceremony, first night of live music and DJs, welcome Gothic dinner.",
+          "activities": ["Hotel check-in", "Festival opening", "Live music", "Gothic dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Dracula Heritage & Gothic Markets",
+          "description": "Morning Dracula walking tour including Abbey ruins and 199 steps, afternoon Bizarre Bazaar shopping, evening fashion show and club night.",
+          "activities": ["Dracula tour", "Abbey visit", "Gothic markets", "Fashion show", "Club night"]
+        },
+        {
+          "day": 3,
+          "title": "Full Festival Day",
+          "description": "Full day at festival with live bands, DJs, markets, Victorian photography session, Gothic literature talks, evening grand ball.",
+          "activities": ["Live bands", "Photography session", "Literature talks", "Gothic ball"]
+        },
+        {
+          "day": 4,
+          "title": "Final Festival Day & Departure",
+          "description": "Morning final festival activities, afternoon farewell gathering, evening departure.",
+          "activities": ["Final festival", "Farewell gathering", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "April or October (festival dates)",
+      "tags": ["gothic", "festival", "dracula", "whitby", "music", "fashion"]
+    },
+    {
+      "name": "Alcatraz Night Tour",
+      "slug": "alcatraz-night-tour-san-francisco",
+      "location": "Alcatraz Island, San Francisco, California, USA",
+      "country": "United States",
+      "theme": "PRISON_HORROR",
+      "description": "Experience America's most notorious prison after dark. This exclusive 2-day package includes the rare Alcatraz Night Tour, true crime history, ghost stories, and exploration of San Francisco's criminal underworld.",
+      "longDescription": "Alcatraz—'The Rock'—America's most infamous maximum-security prison, is eerie enough during the day. But at night, when the last tourists leave and darkness falls over San Francisco Bay, the prison reveals its true haunting nature. This exclusive night tour (limited availability, book months in advance) takes you through the cellblocks after sunset, when shadows deepen and the stories of Al Capone, Machine Gun Kelly, and the Birdman of Alcatraz come alive. Your ranger guide shares tales of brutal violence, failed escape attempts, and the psychological torture of isolation in 'The Hole.' Hear the phantom sounds that guards and visitors report: cell doors slamming, footsteps in empty corridors, and whispers in the darkness. Stand in the cells where prisoners went insane, visit the dining hall where riots erupted, and see the ventilation shafts used in the famous 1962 escape. The night tour includes special access to areas closed during day tours, and the ferry ride back to San Francisco offers stunning views of the illuminated city skyline. Your package also includes a day exploring San Francisco's criminal history—from Barbary Coast vice dens to modern-day crime scenes. This is true crime tourism at its most atmospheric and historically rich.",
+      "duration": 2,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 30,
+      "price": 499.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 1456,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+        "https://images.unsplash.com/photo-1581974206308-b17e2c0e3b8f",
+        "https://images.unsplash.com/photo-1529655683826-aba9b3e77383"
+      ],
+      "inclusions": [
+        "2 nights San Francisco hotel",
+        "Alcatraz Night Tour tickets",
+        "Ferry transportation",
+        "San Francisco crime history tour",
+        "Audio guide",
+        "All entrance fees"
+      ],
+      "exclusions": [
+        "Flights to San Francisco",
+        "Meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "San Francisco Crime History",
+          "description": "Afternoon arrival and check-in, evening San Francisco criminal underworld tour including Barbary Coast, Chinatown tongs, and famous crime scenes.",
+          "activities": ["Hotel check-in", "Crime history tour", "Barbary Coast", "Chinatown"]
+        },
+        {
+          "day": 2,
+          "title": "Alcatraz Night Tour",
+          "description": "Free morning in San Francisco, late afternoon ferry to Alcatraz, exclusive night tour of the prison, evening ferry return with city lights view, late night departure.",
+          "activities": ["Free morning", "Alcatraz ferry", "Night prison tour", "City lights return", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "Year-round (book 3-6 months ahead)",
+      "tags": ["prison", "true-crime", "alcatraz", "san-francisco", "night-tour", "haunted"]
+    },
+    {
+      "name": "Prague Ghost Tour & Medieval Torture Museum",
+      "slug": "prague-ghost-torture-museum",
+      "location": "Prague, Czech Republic",
+      "country": "Czech Republic",
+      "theme": "MEDIEVAL_HORROR",
+      "description": "Explore Prague's dark medieval past through ghost tours, torture museums, and Gothic architecture. This 3-day experience includes Old Town ghost walks, medieval torture exhibits, alchemy tours, and visits to Prague's most haunted locations.",
+      "longDescription": "Prague—the City of a Hundred Spires—hides a dark medieval past beneath its fairy-tale beauty. This comprehensive tour reveals the Gothic horror that lurks in Prague's shadows: torture chambers, alchemist laboratories, and centuries of supernatural legends. Begin in the Old Town Square where 27 Protestant leaders were executed in 1621—their spirits allegedly still haunt the area. Visit the Medieval Torture Museum to see authentic instruments of pain: the Iron Maiden, the Rack, thumbscrews, and the Pear of Anguish, complete with historical explanations of their use. Descend into the underground chambers beneath the Old Town Hall, explore the Jewish Quarter's ancient cemetery where graves are stacked 12 layers deep, and visit the Astronomical Clock where Death himself appears every hour. Your evening ghost tours take you through gaslit streets to the most haunted locations: the Iron Man statue that comes alive, the Headless Templar of Ungelt, and the White Lady of Rozmberk Palace. Learn about Prague's Golden Age of alchemy when Emperor Rudolf II invited occultists to seek the Philosopher's Stone. Visit the Speculum Alchemiae, a real 16th-century alchemist's laboratory discovered in 2002. This is medieval horror brought to life in one of Europe's most atmospheric cities.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 15,
+      "price": 699.00,
+      "currency": "EUR",
+      "rating": 4.7,
+      "reviewCount": 834,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1541849546-216549ae216d",
+        "https://images.unsplash.com/photo-1519677100203-a0e668c92439",
+        "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72"
+      ],
+      "inclusions": [
+        "3 nights Old Town hotel",
+        "All museum entries",
+        "Nightly ghost tours",
+        "Alchemy tour and laboratory visit",
+        "Prague Castle tour",
+        "Jewish Quarter tour",
+        "Welcome dinner"
+      ],
+      "exclusions": [
+        "Flights to Prague",
+        "Most meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Old Town & First Ghost Tour",
+          "description": "Afternoon arrival, Old Town Square orientation, evening first ghost tour including Astronomical Clock and execution site, welcome dinner.",
+          "activities": ["Hotel check-in", "Old Town tour", "Ghost tour", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Medieval Torture & Alchemy",
+          "description": "Morning Medieval Torture Museum, afternoon alchemy tour and Speculum Alchemiae visit, evening Jewish Quarter ghost tour.",
+          "activities": ["Torture museum", "Alchemy tour", "Laboratory visit", "Jewish Quarter"]
+        },
+        {
+          "day": 3,
+          "title": "Prague Castle & Departure",
+          "description": "Morning Prague Castle tour including haunted chambers, afternoon free time, evening farewell dinner and departure.",
+          "activities": ["Castle tour", "Free time", "Farewell dinner", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October-November or year-round",
+      "tags": ["medieval", "torture", "ghost-tour", "prague", "alchemy", "gothic"]
+    },
+    {
+      "name": "Krampusnacht Festival",
+      "slug": "krampusnacht-festival-austria",
+      "location": "Austrian Alps, Austria",
+      "country": "Austria",
+      "theme": "FOLKLORE_HORROR",
+      "description": "Experience the terrifying Alpine tradition of Krampusnacht—when demonic Krampus creatures roam the streets punishing the wicked. This 3-day festival includes Krampus runs, traditional celebrations, costume workshops, and Alpine folklore.",
+      "longDescription": "Forget Santa Claus—in the Austrian Alps, Christmas comes with a demon. Krampus, the horned, cloven-hoofed creature of Alpine folklore, emerges on December 5th (Krampusnacht) to punish naughty children while St. Nicholas rewards the good. This ancient pagan tradition, suppressed for decades, has roared back to life as one of Europe's most terrifying festivals. Your experience centers on the Krampuslauf (Krampus Run), where hundreds of locals don elaborate hand-carved wooden masks, fur costumes, cowbells, and chains to become Krampus demons. They rampage through mountain villages, chasing spectators, rattling chains, and playfully 'punishing' the crowd with birch switches. The costumes are works of art—some taking months to create—featuring grotesque faces, real animal horns, and LED-lit eyes. Beyond the runs, you'll attend traditional Perchtenlauf (similar to Krampus but with different folklore), visit mask-carving workshops, learn about Alpine pagan traditions, and enjoy traditional Austrian Christmas markets. The atmosphere is part horror show, part cultural celebration, part drunken revelry. It's loud, chaotic, sometimes genuinely frightening, and utterly unique. This is folklore horror brought to life in the most spectacular way possible.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 20,
+      "price": 899.00,
+      "currency": "EUR",
+      "rating": 4.9,
+      "reviewCount": 456,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1512389142860-9c449e58a543",
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5",
+        "https://images.unsplash.com/photo-1482517967863-00e15c9b44be"
+      ],
+      "inclusions": [
+        "3 nights Alpine hotel accommodation",
+        "Access to multiple Krampus runs",
+        "Mask-carving workshop",
+        "Traditional Austrian meals",
+        "Christmas market visits",
+        "Folklore expert guide",
+        "Transportation between villages"
+      ],
+      "exclusions": [
+        "Flights to Austria",
+        "Some meals",
+        "Alcoholic beverages",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Folklore Introduction",
+          "description": "Afternoon arrival in Austrian Alps, check-in to traditional hotel, evening Krampus folklore lecture, traditional dinner, first small Krampus run.",
+          "activities": ["Hotel check-in", "Folklore lecture", "Traditional dinner", "First Krampus run"]
+        },
+        {
+          "day": 2,
+          "title": "Krampusnacht - Main Festival",
+          "description": "Morning mask-carving workshop, afternoon Christmas market visit, evening main Krampuslauf with hundreds of Krampus, late night traditional celebration.",
+          "activities": ["Mask workshop", "Christmas market", "Main Krampuslauf", "Traditional celebration"]
+        },
+        {
+          "day": 3,
+          "title": "St. Nicholas Day & Departure",
+          "description": "Morning St. Nicholas celebration (the good side of the tradition), afternoon farewell lunch, evening departure.",
+          "activities": ["St. Nicholas celebration", "Farewell lunch", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "December 5-6 (Krampusnacht)",
+      "tags": ["krampus", "folklore", "festival", "austria", "christmas", "demons"]
+    },
+    {
+      "name": "Sleepy Hollow Halloween",
+      "slug": "sleepy-hollow-halloween-new-york",
+      "location": "Sleepy Hollow, New York, USA",
+      "country": "United States",
+      "theme": "LITERARY_HORROR",
+      "description": "Visit the legendary village that inspired Washington Irving's Headless Horseman. This 3-day Halloween experience includes cemetery tours, Horseman reenactments, haunted hayrides, and exploration of America's most famous ghost story.",
+      "longDescription": "Every October, the village of Sleepy Hollow transforms into a living celebration of Washington Irving's legendary tale. This is where the Headless Horseman rides, where Ichabod Crane taught school, and where American Gothic literature was born. Your experience begins at the Old Dutch Church and its adjacent Sleepy Hollow Cemetery, where Washington Irving himself is buried alongside Andrew Carnegie, Elizabeth Arden, and other luminaries. But the real draw is the Horseman's Bridge, where Ichabod Crane met his terrifying fate. Your tour includes the famous Horseman's Hollow haunted attraction—a theatrical outdoor experience where the Headless Horseman and his minions terrorize visitors through the woods. Attend the Great Jack O'Lantern Blaze featuring 7,000+ hand-carved pumpkins in elaborate displays. Take a haunted hayride through the countryside where Irving set his tale, visit the Old Dutch Church for candlelit tours, and attend dramatic readings of 'The Legend of Sleepy Hollow' by professional actors. The village embraces its literary heritage completely, with period costumes, colonial-era taverns, and historical reenactments. This is literary horror tourism at its finest—a chance to walk through the pages of America's most enduring ghost story.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 12,
+      "maxGroupSize": 20,
+      "price": 799.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 923,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9"
+      ],
+      "inclusions": [
+        "3 nights accommodation in Sleepy Hollow",
+        "Horseman's Hollow tickets",
+        "Great Jack O'Lantern Blaze entry",
+        "Cemetery tours",
+        "Haunted hayride",
+        "Dramatic reading performance",
+        "All guided tours"
+      ],
+      "exclusions": [
+        "Flights to New York",
+        "Transportation to Sleepy Hollow",
+        "Most meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Literary Introduction",
+          "description": "Afternoon arrival, check-in, evening walking tour of historic Sleepy Hollow, dramatic reading of the legend, welcome dinner at colonial tavern.",
+          "activities": ["Hotel check-in", "Village tour", "Dramatic reading", "Colonial dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Halloween Attractions",
+          "description": "Morning cemetery tour including Irving's grave, afternoon Great Jack O'Lantern Blaze, evening Horseman's Hollow haunted experience.",
+          "activities": ["Cemetery tour", "Pumpkin Blaze", "Horseman's Hollow"]
+        },
+        {
+          "day": 3,
+          "title": "Horseman's Bridge & Departure",
+          "description": "Morning visit to Horseman's Bridge and Old Dutch Church, afternoon haunted hayride, evening farewell dinner and departure.",
+          "activities": ["Horseman's Bridge", "Church tour", "Haunted hayride", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October (Halloween season)",
+      "tags": ["literary", "halloween", "headless-horseman", "sleepy-hollow", "haunted", "usa"]
+    },
+    {
+      "name": "Sedlec Ossuary - The Bone Church",
+      "slug": "sedlec-ossuary-bone-church-czech",
+      "location": "Kutná Hora, Czech Republic",
+      "country": "Czech Republic",
+      "theme": "MACABRE_ART",
+      "description": "Visit the world's most famous bone church, decorated with the skeletons of 40,000 people. This 2-day experience includes the Sedlec Ossuary, medieval silver mines, Gothic cathedrals, and the dark history of the Black Death.",
+      "longDescription": "The Sedlec Ossuary is unlike anything else on Earth—a small chapel decorated entirely with human bones arranged in elaborate artistic displays. Forty thousand skeletons, victims of the 14th-century Black Death and 15th-century Hussite Wars, were exhumed from the overcrowded cemetery and artistically arranged by a half-blind monk and later a woodcarver named František Rint. The result is simultaneously beautiful and horrifying: a chandelier containing every bone in the human body, pyramids of skulls, bone garlands draping the walls, and the Schwarzenberg coat of arms rendered in bones. The ossuary forces visitors to confront mortality in the most direct way possible—you're literally surrounded by death, yet it's presented as art. Your tour includes the full history of why this ossuary exists, the medieval belief that being buried in 'holy soil' (brought from Jerusalem) guaranteed salvation, and the practical problem of too many bodies in too small a space. Beyond the ossuary, explore Kutná Hora's other Gothic treasures: the stunning St. Barbara's Cathedral, the medieval silver mines that made the town wealthy, and the Italian Court where silver coins were minted. This is memento mori—'remember you must die'—made tangible and unforgettable.",
+      "duration": 2,
+      "difficulty": "EASY",
+      "minAge": 14,
+      "maxGroupSize": 15,
+      "price": 399.00,
+      "currency": "EUR",
+      "rating": 4.9,
+      "reviewCount": 1234,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded",
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9"
+      ],
+      "inclusions": [
+        "2 nights accommodation in Kutná Hora",
+        "Sedlec Ossuary entry and guided tour",
+        "St. Barbara's Cathedral tour",
+        "Silver mine tour",
+        "Italian Court visit",
+        "Expert art history guide",
+        "Transportation from Prague (optional)"
+      ],
+      "exclusions": [
+        "Flights to Prague",
+        "Meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Kutná Hora Arrival & Bone Church",
+          "description": "Morning arrival from Prague, afternoon Sedlec Ossuary tour with art history lecture, evening St. Barbara's Cathedral visit, dinner in medieval town.",
+          "activities": ["Kutná Hora arrival", "Ossuary tour", "Cathedral visit", "Medieval dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Silver Mines & Departure",
+          "description": "Morning medieval silver mine tour, afternoon Italian Court visit, evening return to Prague or departure.",
+          "activities": ["Silver mine tour", "Italian Court", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "Year-round",
+      "tags": ["ossuary", "bones", "macabre-art", "czech-republic", "gothic", "death"]
+    },
+    {
+      "name": "Gettysburg Battlefield Ghost Tour",
+      "slug": "gettysburg-battlefield-ghost-tour",
+      "location": "Gettysburg, Pennsylvania, USA",
+      "country": "United States",
+      "theme": "CIVIL_WAR_HAUNTING",
+      "description": "Explore America's most haunted battlefield where 51,000 soldiers fell in three days. This 3-day experience includes battlefield tours, paranormal investigations, Civil War history, and visits to the most actively haunted locations.",
+      "longDescription": "Gettysburg isn't just America's most important Civil War battlefield—it's also its most haunted. In July 1863, 51,000 men were killed, wounded, or went missing in just three days of brutal combat. The sheer scale of death left an indelible mark on the land, and paranormal activity has been reported continuously for 160 years. Your experience combines serious Civil War history with documented paranormal phenomena. Expert historian guides lead you across the battlefield, explaining the tactics, the horror, and the human cost of Pickett's Charge, Little Round Top, and Devil's Den. As night falls, the tour shifts to paranormal investigation. Visit the most actively haunted locations: the Triangular Field where phantom gunfire is heard, the Wheatfield where apparitions of wounded soldiers appear, and Devil's Den where cameras mysteriously malfunction. Investigate the Jennie Wade House (the only civilian killed during the battle), the Farnsworth House Inn (still pockmarked with bullet holes), and the Gettysburg Orphanage where children's spirits are said to play. Use professional ghost-hunting equipment including EMF detectors, spirit boxes, and thermal cameras. Whether you're a Civil War buff, paranormal enthusiast, or both, Gettysburg offers a profound encounter with American history and the supernatural.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 15,
+      "price": 699.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 1089,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9",
+        "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad"
+      ],
+      "inclusions": [
+        "3 nights accommodation in historic Gettysburg inn",
+        "All battlefield tours",
+        "Nightly paranormal investigations",
+        "Ghost-hunting equipment",
+        "Museum entries",
+        "Expert historian and paranormal guides",
+        "Welcome dinner"
+      ],
+      "exclusions": [
+        "Flights to Pennsylvania",
+        "Most meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Battlefield History & First Investigation",
+          "description": "Afternoon arrival, battlefield orientation tour, evening Jennie Wade House investigation, welcome dinner.",
+          "activities": ["Hotel check-in", "Battlefield tour", "Jennie Wade investigation", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Major Battle Sites & Night Investigation",
+          "description": "Full day touring major battle sites (Little Round Top, Devil's Den, Pickett's Charge), evening investigation of Triangular Field and Wheatfield.",
+          "activities": ["Little Round Top", "Devil's Den", "Pickett's Charge", "Night investigation"]
+        },
+        {
+          "day": 3,
+          "title": "Final Sites & Departure",
+          "description": "Morning Farnsworth House and Orphanage investigation, afternoon museum visit, evening farewell dinner and departure.",
+          "activities": ["Farnsworth House", "Orphanage", "Museum visit", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "July (anniversary) or October-November",
+      "tags": ["civil-war", "battlefield", "paranormal", "gettysburg", "haunted", "history"]
+    },
+    {
+      "name": "Port Arthur Ghost Tour",
+      "slug": "port-arthur-ghost-tour-tasmania",
+      "location": "Port Arthur, Tasmania, Australia",
+      "country": "Australia",
+      "theme": "PRISON_HORROR",
+      "description": "Explore Australia's most haunted convict site and the scene of a modern tragedy. This 2-day experience includes ghost tours of the historic prison, Isle of the Dead cemetery, and the dark history of Australia's penal colony system.",
+      "longDescription": "Port Arthur, on Tasmania's remote Tasman Peninsula, carries a double burden of darkness. First, it was Australia's harshest convict settlement (1830-1877), where the British Empire sent its most hardened criminals to endure brutal punishment, solitary confinement, and psychological torture. Second, it was the site of Australia's worst mass shooting in 1996, adding modern tragedy to historical horror. Your tour explores both layers of darkness with sensitivity and historical accuracy. The daytime tour covers the remarkably preserved prison ruins, the Model Prison (designed for psychological punishment through isolation), the church, hospital, and asylum. Learn about the convict system's cruelty, the men who went mad from solitary confinement, and the few who attempted escape into Tasmania's wilderness. As night falls, the ghost tour begins. Port Arthur is one of the world's most actively haunted locations, with over 1,500 documented paranormal experiences. Walk through the ruins by lantern light, hearing stories of the Blue Lady, the Faceless Man, and other apparitions regularly seen by staff and visitors. Visit the Isle of the Dead, the island cemetery where 1,000 convicts and settlers are buried, accessible only by boat. The tour handles the 1996 tragedy respectfully, acknowledging it without exploitation. This is dark tourism that confronts both historical and modern horror with appropriate gravity.",
+      "duration": 2,
+      "difficulty": "EASY",
+      "minAge": 18,
+      "maxGroupSize": 20,
+      "price": 599.00,
+      "currency": "AUD",
+      "rating": 4.7,
+      "reviewCount": 678,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800"
+      ],
+      "inclusions": [
+        "2 nights accommodation near Port Arthur",
+        "Day and night ghost tours",
+        "Isle of the Dead boat tour",
+        "All site entries",
+        "Expert historian guide",
+        "Transportation to/from Hobart"
+      ],
+      "exclusions": [
+        "Flights to Tasmania",
+        "Meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Port Arthur History & Day Tour",
+          "description": "Morning departure from Hobart, afternoon comprehensive day tour of Port Arthur ruins, evening ghost tour, overnight near Port Arthur.",
+          "activities": ["Hobart departure", "Day tour", "Prison ruins", "Ghost tour"]
+        },
+        {
+          "day": 2,
+          "title": "Isle of the Dead & Departure",
+          "description": "Morning boat tour to Isle of the Dead cemetery, afternoon final site exploration, evening return to Hobart.",
+          "activities": ["Isle of the Dead", "Cemetery tour", "Final exploration", "Hobart return"]
+        }
+      ],
+      "bestTimeToVisit": "Year-round",
+      "tags": ["prison", "convict", "haunted", "tasmania", "australia", "dark-tourism"]
+    },
+    {
+      "name": "Samhain Festival - Ancient Celtic Halloween",
+      "slug": "samhain-festival-ireland",
+      "location": "County Meath, Ireland",
+      "country": "Ireland",
+      "theme": "ANCIENT_RITUAL",
+      "description": "Experience Halloween at its ancient Celtic origins. This 4-day Samhain festival includes traditional Celtic rituals, bonfires, Hill of Tara ceremonies, ancient burial mounds, and the authentic roots of modern Halloween.",
+      "longDescription": "Long before Halloween became commercialized, it was Samhain—the ancient Celtic festival marking the end of harvest and the beginning of winter's darkness. The Celts believed that on Samhain night (October 31st), the veil between the living and the dead grew thin, allowing spirits to cross over. This authentic Samhain experience takes you to Ireland's most sacred ancient sites to celebrate as the Celts did 2,000 years ago. Your journey centers on the Hill of Tara, the ancient seat of Irish High Kings, and Tlachtga (Hill of Ward), where the Great Fire of Samhain was lit. Participate in traditional Celtic rituals led by modern druids and Celtic scholars: lighting sacred bonfires, making offerings to ancestors, divination practices, and storytelling around the fire. Visit Newgrange, the 5,000-year-old passage tomb aligned with the winter solstice, and explore other ancient burial mounds where the spirits of ancestors dwell. Learn the origins of Halloween traditions: why we carve jack-o'-lanterns (originally turnips), wear costumes (to confuse spirits), and go door-to-door (souling for soul cakes). Attend traditional Irish music sessions, feast on period-appropriate foods, and participate in mumming plays. This isn't a tourist Halloween party—it's a genuine connection to ancient Celtic spirituality and the original meaning of this sacred night.",
+      "duration": 4,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 25,
+      "price": 1199.00,
+      "currency": "EUR",
+      "rating": 5.0,
+      "reviewCount": 445,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9"
+      ],
+      "inclusions": [
+        "4 nights accommodation in County Meath",
+        "All Samhain ceremonies and rituals",
+        "Hill of Tara and Tlachtga access",
+        "Newgrange tour",
+        "Traditional Irish meals",
+        "Celtic scholar guides",
+        "Ritual materials and costume",
+        "Transportation to all sites"
+      ],
+      "exclusions": [
+        "Flights to Ireland",
+        "Some meals",
+        "Personal expenses",
+        "Travel insurance",
+        "Alcoholic beverages"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Celtic Introduction",
+          "description": "Afternoon arrival, check-in to traditional Irish accommodation, evening introduction to Celtic Samhain traditions, welcome feast.",
+          "activities": ["Accommodation check-in", "Celtic traditions lecture", "Welcome feast"]
+        },
+        {
+          "day": 2,
+          "title": "Ancient Sites & Preparation",
+          "description": "Morning tour of Newgrange passage tomb, afternoon visit to Hill of Tara, evening Samhain preparation and costume creation.",
+          "activities": ["Newgrange tour", "Hill of Tara", "Samhain preparation"]
+        },
+        {
+          "day": 3,
+          "title": "Samhain Night - Main Ritual",
+          "description": "Afternoon rest and preparation, evening journey to Tlachtga, Samhain bonfire lighting ceremony, traditional rituals, ancestor offerings, all-night celebration.",
+          "activities": ["Tlachtga journey", "Bonfire ceremony", "Traditional rituals", "All-night celebration"]
+        },
+        {
+          "day": 4,
+          "title": "Reflection & Departure",
+          "description": "Late morning recovery and reflection session, afternoon farewell gathering, evening departure.",
+          "activities": ["Reflection session", "Farewell gathering", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October 31 - November 1",
+      "tags": ["samhain", "celtic", "ancient-ritual", "ireland", "halloween-origins", "pagan"]
+    }
+  ]
+}
