@@ -1,0 +1,327 @@
+{
+  "holidays": [
+    {
+      "name": "Salem Witch Trials Experience",
+      "slug": "salem-witch-trials-experience",
+      "location": "Salem, Massachusetts, USA",
+      "country": "United States",
+      "theme": "HISTORICAL_HORROR",
+      "description": "Step back into the dark history of 1692 and experience the chilling tale of the Salem Witch Trials. This immersive 3-day experience takes you through authentic locations, historical reenactments, and spine-tingling ghost tours through America's most haunted town.",
+      "longDescription": "Immerse yourself in one of America's darkest chapters with our comprehensive Salem Witch Trials Experience. Walk the same streets where accused witches were tried and executed, explore the actual courtroom where hysteria reigned, and visit the haunting memorial dedicated to the 20 innocent victims. Your expert historian guide will bring the terror of 1692 to life with authentic stories, documented evidence, and chilling eyewitness accounts. As night falls, join our exclusive after-hours ghost tour through Salem's most paranormally active locations, including the Old Burying Point Cemetery and the Witch House. This isn't just a history lesson—it's a journey into the supernatural that will leave you questioning what's real and what's beyond.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 16,
+      "maxGroupSize": 15,
+      "price": 599.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 342,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c",
+        "https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9"
+      ],
+      "inclusions": [
+        "3 nights accommodation in historic inn",
+        "All guided tours and museum entries",
+        "Exclusive after-hours ghost tour",
+        "Historical reenactment experience",
+        "Welcome dinner at historic tavern",
+        "Souvenir witch trial documentation pack"
+      ],
+      "exclusions": [
+        "Flights to Boston",
+        "Personal expenses",
+        "Additional meals not mentioned",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Historical Introduction",
+          "description": "Check into your historic inn, welcome dinner at a 17th-century tavern, and evening orientation about the witch trials. Night walk through downtown Salem.",
+          "activities": ["Hotel check-in", "Welcome dinner", "Evening orientation", "Downtown night walk"]
+        },
+        {
+          "day": 2,
+          "title": "The Witch Trials Deep Dive",
+          "description": "Full day exploring witch trial sites including the Witch House, Salem Witch Museum, Witch Trials Memorial, and Old Burying Point Cemetery. Afternoon historical reenactment of a witch trial. Evening exclusive ghost tour.",
+          "activities": ["Witch House tour", "Salem Witch Museum", "Memorial visit", "Trial reenactment", "Ghost tour"]
+        },
+        {
+          "day": 3,
+          "title": "Paranormal Investigation & Departure",
+          "description": "Morning visit to Gallows Hill and the Charter Street Cemetery. Afternoon paranormal investigation workshop with professional ghost hunters. Evening departure.",
+          "activities": ["Gallows Hill visit", "Cemetery exploration", "Paranormal workshop", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October (Halloween season) or year-round",
+      "tags": ["witch-trials", "historical", "ghost-tour", "paranormal", "usa"]
+    },
+    {
+      "name": "Edinburgh Ghost Tour & Underground Vaults",
+      "slug": "edinburgh-ghost-underground-vaults",
+      "location": "Edinburgh, Scotland",
+      "country": "United Kingdom",
+      "theme": "PARANORMAL",
+      "description": "Descend into Edinburgh's legendary underground vaults and explore the most haunted city in Europe. This 4-day terror tour includes exclusive access to restricted paranormal hotspots, medieval torture chambers, and spine-chilling ghost walks through the Old Town.",
+      "longDescription": "Edinburgh's dark history comes alive in this comprehensive paranormal adventure through Scotland's capital of the supernatural. Venture deep beneath the Royal Mile into the infamous South Bridge Vaults, where poltergeist activity has been documented for centuries. Your experienced paranormal guide will lead you through the most actively haunted chambers, sharing documented encounters and allowing you to conduct your own investigations with professional ghost-hunting equipment. Above ground, explore the medieval Old Town's darkest corners, visit the haunted Greyfriars Kirkyard where the Mackenzie Poltergeist terrorizes visitors, and walk the cobblestone streets where body snatchers once prowled. Each night brings new terrors as you investigate different paranormal hotspots, from plague-ridden closes to execution sites. This is Edinburgh's dark side—raw, terrifying, and unforgettable.",
+      "duration": 4,
+      "difficulty": "MODERATE",
+      "minAge": 18,
+      "maxGroupSize": 12,
+      "price": 899.00,
+      "currency": "GBP",
+      "rating": 4.9,
+      "reviewCount": 567,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1555881400-74d7acaacd8b",
+        "https://images.unsplash.com/photo-1599930113854-d6d7fd521f10",
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded"
+      ],
+      "inclusions": [
+        "4 nights accommodation in Old Town hotel",
+        "All underground vault tours",
+        "Professional paranormal investigation equipment",
+        "Greyfriars Kirkyard night tour",
+        "Edinburgh Castle ghost tour",
+        "Medieval torture museum entry",
+        "Daily breakfast"
+      ],
+      "exclusions": [
+        "International flights",
+        "Lunch and dinner",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Old Town Introduction",
+          "description": "Check-in to your Old Town hotel, afternoon walking tour of Edinburgh's haunted Royal Mile, evening ghost stories session and welcome dinner.",
+          "activities": ["Hotel check-in", "Royal Mile tour", "Ghost stories", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Underground Vaults Investigation",
+          "description": "Morning visit to Edinburgh Castle's haunted chambers, afternoon descent into the South Bridge Vaults for paranormal investigation, evening Greyfriars Kirkyard tour including the Mackenzie Poltergeist site.",
+          "activities": ["Castle ghost tour", "Vault investigation", "Kirkyard night tour", "Poltergeist encounter"]
+        },
+        {
+          "day": 3,
+          "title": "Medieval Horrors & Body Snatchers",
+          "description": "Full day exploring Edinburgh's dark medical history, visit to the Surgeons' Hall Museum, afternoon tour of Burke and Hare murder sites, evening investigation of Mary King's Close.",
+          "activities": ["Medical museum", "Murder sites tour", "Mary King's Close", "Underground investigation"]
+        },
+        {
+          "day": 4,
+          "title": "Final Investigation & Departure",
+          "description": "Morning visit to Rosslyn Chapel (Da Vinci Code location), afternoon free time for personal exploration, evening farewell dinner and departure.",
+          "activities": ["Rosslyn Chapel", "Free exploration", "Farewell dinner", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October-November or year-round",
+      "tags": ["paranormal", "underground", "ghost-tour", "scotland", "vaults"]
+    },
+    {
+      "name": "Dracula's Castle Halloween",
+      "slug": "dracula-castle-halloween-bran",
+      "location": "Bran Castle, Transylvania, Romania",
+      "country": "Romania",
+      "theme": "VAMPIRE",
+      "description": "Spend Halloween night in the legendary Bran Castle, the inspiration for Dracula's lair. This exclusive 5-day vampire experience includes overnight stays in the castle, vampire folklore tours, visits to Vlad the Impaler's fortress, and a Gothic Halloween ball.",
+      "longDescription": "Live your darkest vampire fantasies in the legendary Bran Castle, perched dramatically on the edge of a cliff in the heart of Transylvania. This exclusive Halloween experience offers what few ever get to experience—sleeping within the castle walls where Bram Stoker's Dracula was born. Your journey begins in medieval Brasov before venturing deep into vampire country, exploring the real history of Vlad the Impaler (Vlad Dracula), whose brutal reign inspired the world's most famous vampire. Visit his birthplace in Sighisoara, explore the ruins of his mountain fortress, and learn the true stories behind the legend. The highlight is Halloween night itself—a Gothic masquerade ball in Bran Castle's grand hall, followed by an overnight stay in the castle's royal chambers. As midnight strikes, join a candlelit tour through the castle's secret passages and torture chambers. This is vampire tourism at its most authentic and atmospheric.",
+      "duration": 5,
+      "difficulty": "EASY",
+      "minAge": 18,
+      "maxGroupSize": 20,
+      "price": 1899.00,
+      "currency": "EUR",
+      "rating": 4.9,
+      "reviewCount": 423,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1565031491910-e57fac031c41",
+        "https://images.unsplash.com/photo-1604869515882-4d10fa4b0492",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
+      ],
+      "inclusions": [
+        "5 nights accommodation (2 nights in Bran Castle)",
+        "All castle and fortress entries",
+        "Halloween Gothic masquerade ball",
+        "Period costume rental",
+        "All guided tours",
+        "Traditional Romanian dinners",
+        "Transportation between locations",
+        "Vampire folklore expert guide"
+      ],
+      "exclusions": [
+        "International flights to Bucharest",
+        "Some meals",
+        "Alcoholic beverages",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival in Transylvania",
+          "description": "Arrival in Bucharest, transfer to Brasov, check into medieval hotel, evening walking tour of Brasov's Gothic quarter and welcome dinner.",
+          "activities": ["Airport pickup", "Brasov transfer", "Gothic quarter tour", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Vlad the Impaler's Origins",
+          "description": "Day trip to Sighisoara, Vlad's birthplace, explore the medieval citadel, visit Vlad's birth house, afternoon journey to Poenari Fortress (Vlad's real castle), evening return to Brasov.",
+          "activities": ["Sighisoara citadel", "Vlad's birth house", "Poenari Fortress", "Historical lecture"]
+        },
+        {
+          "day": 3,
+          "title": "Bran Castle & Halloween Preparation",
+          "description": "Morning transfer to Bran Castle, full castle tour, afternoon costume fitting and Halloween ball preparation, evening traditional Romanian feast.",
+          "activities": ["Castle tour", "Costume fitting", "Ball preparation", "Traditional feast"]
+        },
+        {
+          "day": 4,
+          "title": "Halloween Night in Dracula's Castle",
+          "description": "Day exploring castle grounds and village, afternoon rest and preparation, evening Gothic masquerade ball, midnight castle tour, overnight stay in royal chambers.",
+          "activities": ["Castle grounds", "Village exploration", "Masquerade ball", "Midnight tour", "Castle overnight"]
+        },
+        {
+          "day": 5,
+          "title": "Farewell & Departure",
+          "description": "Morning breakfast in castle, final castle exploration, afternoon transfer to Bucharest, evening departure.",
+          "activities": ["Castle breakfast", "Final exploration", "Bucharest transfer", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October 28-November 2 (Halloween)",
+      "tags": ["vampire", "dracula", "castle", "halloween", "romania", "transylvania"]
+    },
+    {
+      "name": "Day of the Dead Festival",
+      "slug": "day-of-dead-festival-oaxaca",
+      "location": "Oaxaca, Mexico",
+      "country": "Mexico",
+      "theme": "CULTURAL_HORROR",
+      "description": "Experience Mexico's most beautiful and haunting tradition—Día de los Muertos. This 4-day cultural immersion includes cemetery vigils, traditional altar-making, skull-painting workshops, and participation in one of the world's most colorful celebrations of death.",
+      "longDescription": "Witness death celebrated as never before in Oaxaca, the heart of Mexico's Day of the Dead traditions. This isn't horror in the traditional sense—it's something more profound: a culture that embraces death with beauty, color, and joy. Your journey takes you deep into indigenous Zapotec communities where ancient pre-Hispanic death rituals blend with Catholic traditions. Learn to create traditional ofrendas (altars) adorned with marigolds, sugar skulls, and photos of the departed. Join families in candlelit cemetery vigils as they commune with their ancestors through the night. Paint your face as a Catrina, the elegant skeleton lady, and parade through streets filled with music, dancing, and celebration. Visit the famous Xoxocotlán cemetery where thousands gather for the most spectacular graveyard party on Earth. This is a celebration that will forever change how you view death—transforming fear into beauty, grief into joy, and endings into eternal connections.",
+      "duration": 4,
+      "difficulty": "EASY",
+      "minAge": 12,
+      "maxGroupSize": 16,
+      "price": 1299.00,
+      "currency": "USD",
+      "rating": 5.0,
+      "reviewCount": 891,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+        "https://images.unsplash.com/photo-1604881991720-f91add269bed",
+        "https://images.unsplash.com/photo-1635274853270-a2e8d5c8f2e5"
+      ],
+      "inclusions": [
+        "4 nights boutique hotel accommodation",
+        "All cultural workshops and activities",
+        "Cemetery vigil experiences",
+        "Traditional meals with local families",
+        "Face painting and costume materials",
+        "Expert cultural guide",
+        "Transportation to all sites",
+        "Altar-making workshop materials"
+      ],
+      "exclusions": [
+        "International flights",
+        "Some meals",
+        "Personal purchases",
+        "Travel insurance",
+        "Alcoholic beverages"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Cultural Introduction",
+          "description": "Arrival in Oaxaca, check into boutique hotel, afternoon introduction to Day of the Dead traditions, evening market tour to see traditional offerings, welcome dinner with local family.",
+          "activities": ["Hotel check-in", "Cultural orientation", "Market tour", "Family dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Altar-Making & Skull Painting",
+          "description": "Morning workshop creating traditional ofrendas, afternoon sugar skull and bread of the dead (pan de muerto) making, evening face painting as Catrinas, night parade through Oaxaca's historic center.",
+          "activities": ["Ofrenda workshop", "Skull making", "Face painting", "Night parade"]
+        },
+        {
+          "day": 3,
+          "title": "Cemetery Vigils & Ancestor Communion",
+          "description": "Afternoon rest and preparation, evening journey to Xoxocotlán cemetery, all-night vigil with local families, participate in traditional ceremonies, music, and offerings, return at dawn.",
+          "activities": ["Cemetery preparation", "Vigil participation", "Traditional ceremonies", "All-night celebration"]
+        },
+        {
+          "day": 4,
+          "title": "Final Celebrations & Departure",
+          "description": "Late morning recovery and brunch, afternoon visit to local artisan workshops, evening farewell dinner and cultural performance, late night departure.",
+          "activities": ["Artisan workshops", "Cultural performance", "Farewell dinner", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October 31 - November 2",
+      "tags": ["cultural", "day-of-dead", "mexico", "cemetery", "tradition", "festival"]
+    },
+    {
+      "name": "Poveglia Island Paranormal Investigation",
+      "slug": "poveglia-island-paranormal-venice",
+      "location": "Poveglia Island, Venice, Italy",
+      "country": "Italy",
+      "theme": "PARANORMAL",
+      "description": "Investigate one of the world's most haunted locations—the forbidden Poveglia Island. This exclusive 2-day paranormal expedition includes overnight investigation in the abandoned plague hospital, professional ghost-hunting equipment, and expert paranormal investigators.",
+      "longDescription": "Dare to spend the night on Poveglia Island, the place the Italian government doesn't want you to visit. This tiny island in the Venetian Lagoon holds one of history's darkest secrets: it served as a quarantine station for plague victims in the 1700s, where over 160,000 people died in agony. Later, it housed a mental asylum where a deranged doctor allegedly performed lobotomies and tortured patients before throwing himself from the bell tower. The island has been abandoned since 1968, and locals refuse to go near it, believing it's cursed. This exclusive expedition—limited to just 8 brave souls—grants you illegal access (with special permits) to investigate the crumbling hospital, asylum, and plague pits. Armed with EMF detectors, spirit boxes, and thermal cameras, you'll conduct a full night investigation in one of the most paranormally active locations on Earth. Documented phenomena include shadow figures, disembodied screams, and the phantom ringing of the bell tower's bell—which was removed decades ago. This is extreme paranormal investigation for serious ghost hunters only.",
+      "duration": 2,
+      "difficulty": "EXTREME",
+      "minAge": 21,
+      "maxGroupSize": 8,
+      "price": 2499.00,
+      "currency": "EUR",
+      "rating": 4.7,
+      "reviewCount": 89,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9",
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c"
+      ],
+      "inclusions": [
+        "2 nights accommodation (1 night on island)",
+        "Private boat transfers to/from island",
+        "Professional paranormal investigation equipment",
+        "Expert paranormal investigator guides",
+        "Safety equipment and first aid",
+        "All permits and access fees",
+        "Pre-investigation training",
+        "Post-investigation evidence review"
+      ],
+      "exclusions": [
+        "Flights to Venice",
+        "Meals",
+        "Personal expenses",
+        "Travel insurance",
+        "Psychological counseling (if needed)"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Venice Arrival & Investigation Preparation",
+          "description": "Morning arrival in Venice, afternoon paranormal investigation training session, equipment familiarization, evening historical briefing about Poveglia's dark past, overnight in Venice hotel.",
+          "activities": ["Venice arrival", "Investigation training", "Equipment setup", "Historical briefing"]
+        },
+        {
+          "day": 2,
+          "title": "Poveglia Island Overnight Investigation",
+          "description": "Morning boat transfer to Poveglia, afternoon exploration of island and investigation site setup, evening investigation begins at sunset, all-night paranormal investigation, dawn boat return to Venice, morning evidence review and departure.",
+          "activities": ["Island transfer", "Site exploration", "Equipment setup", "All-night investigation", "Evidence review", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "April-October (weather dependent)",
+      "tags": ["paranormal", "extreme", "investigation", "haunted-island", "italy", "venice"]
+    }
+  ]
+}
