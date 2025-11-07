@@ -270,11 +270,11 @@ eerie-escapes/
 - [x] Add pricing and booking information
 
 **Day 18 (5h)** - Content Entry & Testing
-- [ ] Enter all 20 holidays into database
-- [ ] Upload and optimize images
-- [ ] Test all holiday detail pages
-- [ ] Verify search and filter functionality
-- [ ] Fix any bugs or issues
+- [x] Enter all 20 holidays into database
+- [x] Upload and optimize images
+- [x] Test all holiday detail pages
+- [x] Verify search and filter functionality
+- [x] Fix any bugs or issues
 
 **Day 19 (5h)** - SEO & Performance
 - [ ] Implement meta tags and Open Graph
@@ -500,535 +500,117 @@ eerie-escapes/
 - [ ] Negotiate commission structures
 - [ ] Sign first 3-5 partners
 
-**Day 49 (5h)** - Community Building
-- [ ] Create Facebook group
-- [ ] Launch Reddit presence
-- [ ] Engage in horror travel forums
-- [ ] Create user-generated content campaign
-- [ ] Host first virtual event
+**Day 49 (5h)** - Influencer Marketing
+- [ ] Identify horror/travel influencers
+- [ ] Create influencer partnership packages
+- [ ] Reach out to 20 influencers
+- [ ] Negotiate collaboration terms
+- [ ] Launch first influencer campaign
 
 **Day 50 (5h)** - Analytics & Optimization
-- [ ] Analyze first month metrics
-- [ ] Identify conversion bottlenecks
-- [ ] A/B test key pages
-- [ ] Optimize user flows
-- [ ] Create improvement roadmap
-
-#### Week 11: Feature Enhancements (25 hours)
-**Day 51 (5h)** - Wishlist & Favorites
-- [ ] Create wishlist database schema
-- [ ] Implement wishlist API endpoints
-- [ ] Build wishlist UI components
-- [ ] Add email notifications for price drops
-- [ ] Create wishlist sharing feature
-
-**Day 52 (5h)** - Advanced Search
-- [ ] Add map-based search
-- [ ] Implement date range picker
-- [ ] Create budget calculator
-- [ ] Add "Similar Holidays" feature
-- [ ] Implement search history
-
-**Day 53 (5h)** - Social Features - Part 1
-- [ ] Design social sharing system
-- [ ] Add share buttons to all pages
-- [ ] Create referral program
-- [ ] Implement social login
-- [ ] Add social proof widgets
-
-**Day 54 (5h)** - Social Features - Part 2
-- [ ] Create user profiles (public view)
-- [ ] Add follow/follower system
-- [ ] Implement activity feed
-- [ ] Create badges and achievements
-- [ ] Add leaderboard
-
-**Day 55 (5h)** - Mobile Responsiveness Polish
-- [ ] Audit all pages on mobile
-- [ ] Fix remaining responsive issues
-- [ ] Optimize mobile performance
-- [ ] Add mobile-specific features
-- [ ] Test on various devices
-
-#### Week 12: Month 3 Wrap-up (25 hours)
-**Day 56 (5h)** - User Feedback Implementation
-- [ ] Review user feedback
-- [ ] Prioritize feature requests
-- [ ] Fix reported bugs
-- [ ] Improve UX based on feedback
-- [ ] Update documentation
-
-**Day 57 (5h)** - Content Expansion
-- [ ] Add 10 more holidays
-- [ ] Create destination guides
-- [ ] Write horror travel tips blog
-- [ ] Create video content
-- [ ] Expand FAQ section
-
-**Day 58 (5h)** - Performance Audit
-- [ ] Run Lighthouse audits
-- [ ] Optimize Core Web Vitals
-- [ ] Reduce bundle size
-- [ ] Implement lazy loading
-- [ ] Add service worker
-
-**Day 59 (5h)** - Security Review
-- [ ] Conduct security audit
-- [ ] Update dependencies
-- [ ] Fix security vulnerabilities
-- [ ] Implement additional security measures
-- [ ] Document security practices
-
-**Day 60 (5h)** - Month 3 Review & Planning
-- [ ] Analyze 3-month metrics
-- [ ] Review goals vs achievements
-- [ ] Plan Month 4 priorities
-- [ ] Update roadmap
-- [ ] Celebrate milestones
+- [ ] Set up conversion tracking
+- [ ] Create analytics dashboard
+- [ ] Analyze user behavior
+- [ ] Identify optimization opportunities
+- [ ] Implement A/B testing framework
 
 ---
 
-### Month 4: Automation Foundation (Feb 2026)
+### Month 4: Automation & Scaling (Feb 2026)
 
-#### Week 13: Scraping Infrastructure (25 hours)
-**Day 61 (5h)** - Scraping Architecture
-- [ ] Design scraping system architecture
+#### Week 11: Content Automation (25 hours)
+**Day 51 (5h)** - PowerShell Scraping - Part 1
 - [ ] Set up PowerShell environment
-- [ ] Create scraping framework
-- [ ] Implement error handling
-- [ ] Set up logging system
-
-**Day 62 (5h)** - Data Source Research
-- [ ] Identify 20 horror event websites
-- [ ] Analyze website structures
-- [ ] Document scraping strategies
-- [ ] Create source priority list
-- [ ] Set up test environment
-
-**Day 63 (5h)** - Scraper Development - Part 1
-- [ ] Create base scraper class
-- [ ] Implement HTML parsing
-- [ ] Add data extraction logic
-- [ ] Create data validation
-- [ ] Test on sample sites
-
-**Day 64 (5h)** - Scraper Development - Part 2
-- [ ] Build site-specific scrapers (5 sites)
-- [ ] Implement rate limiting
-- [ ] Add proxy support
-- [ ] Create retry logic
-- [ ] Test scrapers
-
-**Day 65 (5h)** - Data Processing Pipeline
-- [ ] Create data cleaning scripts
-- [ ] Implement deduplication
-- [ ] Add data enrichment
-- [ ] Create database import scripts
-- [ ] Test full pipeline
-
-#### Week 14: AI Content Generation (25 hours)
-**Day 66 (5h)** - OpenAI Integration Setup
-- [ ] Set up OpenAI API account
-- [ ] Create API wrapper service
-- [ ] Implement rate limiting
+- [ ] Create web scraping framework
+- [ ] Build holiday discovery scrapers
+- [ ] Implement data extraction logic
 - [ ] Add error handling
-- [ ] Test API connection
 
-**Day 67 (5h)** - Content Generation - Descriptions
-- [ ] Create description generation prompts
-- [ ] Implement description generator
-- [ ] Add quality validation
-- [ ] Create A/B testing system
-- [ ] Generate sample content
+**Day 52 (5h)** - PowerShell Scraping - Part 2
+- [ ] Create image scraping functionality
+- [ ] Implement data validation
+- [ ] Add duplicate detection
+- [ ] Create scheduling system
+- [ ] Test scraping workflows
 
-**Day 68 (5h)** - Content Generation - Itineraries
-- [ ] Design itinerary structure
-- [ ] Create itinerary generation prompts
-- [ ] Implement itinerary generator
-- [ ] Add day-by-day breakdown
-- [ ] Test with various holidays
+**Day 53 (5h)** - GPT Content Generation - Part 1
+- [ ] Set up OpenAI API integration
+- [ ] Create content generation prompts
+- [ ] Implement description generation
+- [ ] Add itinerary generation
+- [ ] Test content quality
 
-**Day 69 (5h)** - Content Generation - SEO
-- [ ] Create meta description generator
-- [ ] Implement title tag generator
-- [ ] Add keyword extraction
-- [ ] Create alt text generator
-- [ ] Generate structured data
+**Day 54 (5h)** - GPT Content Generation - Part 2
+- [ ] Create FAQ generation
+- [ ] Implement SEO optimization
+- [ ] Add content review workflow
+- [ ] Create batch processing
+- [ ] Test automation pipeline
 
-**Day 70 (5h)** - Content Quality Control
-- [ ] Implement content moderation
-- [ ] Add plagiarism checking
-- [ ] Create human review queue
-- [ ] Build content approval workflow
-- [ ] Test quality metrics
+**Day 55 (5h)** - Automation Integration
+- [ ] Connect scraping to database
+- [ ] Implement content approval flow
+- [ ] Create admin review interface
+- [ ] Add automation monitoring
+- [ ] Test end-to-end automation
 
-#### Week 15: Automation Scheduling (25 hours)
-**Day 71 (5h)** - Scheduler Setup
-- [ ] Choose scheduling solution
-- [ ] Set up Azure Functions / Task Scheduler
-- [ ] Create scheduling framework
-- [ ] Implement job queue
-- [ ] Add monitoring
-
-**Day 72 (5h)** - Automated Scraping Jobs
-- [ ] Create daily scraping schedule
-- [ ] Implement incremental updates
-- [ ] Add change detection
-- [ ] Create notification system
-- [ ] Test automation
-
-**Day 73 (5h)** - Automated Content Generation
-- [ ] Schedule content generation jobs
-- [ ] Implement batch processing
-- [ ] Add priority queue
-- [ ] Create content publishing workflow
-- [ ] Test automation
-
-**Day 74 (5h)** - Data Sync & Updates
-- [ ] Create data synchronization system
-- [ ] Implement conflict resolution
-- [ ] Add version control
-- [ ] Create rollback mechanism
-- [ ] Test sync process
-
-**Day 75 (5h)** - Monitoring & Alerts
-- [ ] Set up monitoring dashboard
-- [ ] Create alert system
-- [ ] Implement health checks
-- [ ] Add performance metrics
-- [ ] Test alerting
-
-#### Week 16: Travel API Integration (25 hours)
-**Day 76 (5h)** - Flight API Research
-- [ ] Research flight APIs (Amadeus, Skyscanner)
-- [ ] Compare pricing and features
-- [ ] Choose API provider
-- [ ] Set up API account
-- [ ] Test API endpoints
-
-**Day 77 (5h)** - Flight API Integration
+#### Week 12: Travel API Integration (25 hours)
+**Day 56 (5h)** - Flight API Integration
+- [ ] Research flight APIs (Amadeus/Skyscanner)
+- [ ] Set up API credentials
 - [ ] Implement flight search
 - [ ] Add price comparison
 - [ ] Create booking flow
-- [ ] Implement caching
-- [ ] Test integration
 
-**Day 78 (5h)** - Hotel API Research
-- [ ] Research hotel APIs (Booking.com, etc.)
-- [ ] Compare pricing and features
-- [ ] Choose API provider
-- [ ] Set up API account
-- [ ] Test API endpoints
-
-**Day 79 (5h)** - Hotel API Integration
+**Day 57 (5h)** - Hotel API Integration
+- [ ] Set up Booking.com API
 - [ ] Implement hotel search
-- [ ] Add filtering and sorting
-- [ ] Create booking flow
-- [ ] Implement caching
-- [ ] Test integration
+- [ ] Add accommodation filtering
+- [ ] Create booking integration
+- [ ] Test hotel workflows
 
-**Day 80 (5h)** - Travel Package Builder
-- [ ] Create package builder UI
+**Day 58 (5h)** - Package Creation
+- [ ] Build package builder interface
 - [ ] Implement flight + hotel bundling
-- [ ] Add price calculation
-- [ ] Create package comparison
-- [ ] Test package builder
+- [ ] Add pricing calculations
+- [ ] Create package management
+- [ ] Test package bookings
+
+**Day 59 (5h)** - Travel Integration Polish
+- [ ] Optimize API performance
+- [ ] Add caching for searches
+- [ ] Implement error handling
+- [ ] Create fallback options
+- [ ] Test edge cases
+
+**Day 60 (5h)** - Travel Features Testing
+- [ ] Comprehensive travel API testing
+- [ ] Fix integration bugs
+- [ ] Optimize user experience
+- [ ] Add loading states
+- [ ] Document travel features
 
 ---
 
 ### Month 5: Advanced Features (Mar 2026)
 
-#### Week 17: Partner Dashboard (25 hours)
-**Day 81 (5h)** - Partner Dashboard UI
-- [ ] Design dashboard layout
-- [ ] Create navigation
-- [ ] Build overview widgets
-- [ ] Add quick actions
-- [ ] Implement responsive design
-
-**Day 82 (5h)** - Listing Management
-- [ ] Create listing CRUD interface
-- [ ] Add bulk operations
-- [ ] Implement draft system
-- [ ] Create preview functionality
-- [ ] Add listing analytics
-
-**Day 83 (5h)** - Booking Management
-- [ ] Build booking calendar
-- [ ] Create booking list view
-- [ ] Add booking details modal
-- [ ] Implement status updates
-- [ ] Create booking export
-
-**Day 84 (5h)** - Revenue & Analytics
-- [ ] Create revenue dashboard
-- [ ] Add earnings breakdown
-- [ ] Implement payout system
-- [ ] Create financial reports
-- [ ] Add tax documentation
-
-**Day 85 (5h)** - Partner Communication
-- [ ] Build messaging system
-- [ ] Create notification center
-- [ ] Add email integration
-- [ ] Implement chat support
-- [ ] Create help center
-
-#### Week 18: Advanced Booking (25 hours)
-**Day 86 (5h)** - Group Bookings
-- [ ] Design group booking schema
-- [ ] Create group booking API
-- [ ] Build group booking UI
-- [ ] Add group discounts
-- [ ] Test group flows
-
-**Day 87 (5h)** - Custom Packages
-- [ ] Create package builder
-- [ ] Add customization options
-- [ ] Implement dynamic pricing
-- [ ] Create package templates
-- [ ] Test custom packages
-
-**Day 88 (5h)** - Booking Modifications
-- [ ] Implement date changes
-- [ ] Add guest modifications
-- [ ] Create upgrade system
-- [ ] Implement cancellation policies
-- [ ] Test modification flows
-
-**Day 89 (5h)** - Waitlist System
-- [ ] Create waitlist database schema
-- [ ] Implement waitlist API
-- [ ] Build waitlist UI
-- [ ] Add automatic notifications
-- [ ] Test waitlist system
-
-**Day 90 (5h)** - Gift Vouchers
-- [ ] Design voucher system
-- [ ] Create voucher generation
-- [ ] Implement redemption flow
-- [ ] Add voucher management
-- [ ] Test voucher system
-
-#### Week 19: Review & Rating System (25 hours)
-**Day 91 (5h)** - Review Platform
-- [ ] Enhance review database
-- [ ] Create review API endpoints
-- [ ] Build review submission form
-- [ ] Add photo/video uploads
-- [ ] Implement moderation
-
-**Day 92 (5h)** - Rating System
-- [ ] Create multi-criteria rating
-- [ ] Implement rating aggregation
-- [ ] Add rating filters
-- [ ] Create rating analytics
-- [ ] Display rating breakdowns
-
-**Day 93 (5h)** - Review Rewards
-- [ ] Design reward system
-- [ ] Create points mechanism
-- [ ] Implement reward tiers
-- [ ] Add reward redemption
-- [ ] Create reward dashboard
-
-**Day 94 (5h)** - Verified Reviews
-- [ ] Implement booking verification
-- [ ] Add verified badges
-- [ ] Create verification workflow
-- [ ] Implement fraud detection
-- [ ] Test verification system
-
-**Day 95 (5h)** - Review Analytics
-- [ ] Create sentiment analysis
-- [ ] Implement review insights
-- [ ] Add trending topics
-- [ ] Create review reports
-- [ ] Build partner review dashboard
-
-#### Week 20: Recommendation Engine (25 hours)
-**Day 96 (5h)** - Recommendation Algorithm
-- [ ] Design recommendation system
-- [ ] Implement collaborative filtering
-- [ ] Add content-based filtering
-- [ ] Create hybrid approach
-- [ ] Test algorithms
-
-**Day 97 (5h)** - User Preferences
-- [ ] Create preference collection
-- [ ] Implement preference learning
-- [ ] Add preference management
-- [ ] Create preference profiles
-- [ ] Test preference system
-
-**Day 98 (5h)** - Personalized Recommendations
-- [ ] Implement homepage recommendations
-- [ ] Add email recommendations
-- [ ] Create "You Might Like" sections
-- [ ] Implement dynamic content
-- [ ] Test personalization
-
-**Day 99 (5h)** - Similar Holidays
-- [ ] Create similarity algorithm
-- [ ] Implement related holidays
-- [ ] Add "Customers Also Viewed"
-- [ ] Create comparison tool
-- [ ] Test similarity matching
-
-**Day 100 (5h)** - Recommendation Analytics
-- [ ] Track recommendation performance
-- [ ] Implement A/B testing
-- [ ] Create recommendation reports
-- [ ] Optimize algorithms
-- [ ] Document findings
+#### Week 13-16: Advanced Features
+- Community features
+- Advanced analytics
+- Mobile app planning
+- Performance optimization
+- Security enhancements
 
 ---
 
-### Month 6: Polish & Scale (Apr 2026)
+### Month 6: Launch & Growth (Apr 2026)
 
-#### Week 21: Mobile App Planning (25 hours)
-**Day 101 (5h)** - Mobile Strategy
-- [ ] Define mobile app scope
-- [ ] Choose technology (React Native / Flutter)
-- [ ] Create mobile roadmap
-- [ ] Design mobile architecture
-- [ ] Set up development environment
-
-**Day 102 (5h)** - Mobile Design
-- [ ] Create mobile wireframes
-- [ ] Design mobile UI/UX
-- [ ] Create design system
-- [ ] Build prototype
-- [ ] Conduct user testing
-
-**Day 103 (5h)** - Mobile API Preparation
-- [ ] Audit API for mobile
-- [ ] Optimize API responses
-- [ ] Implement GraphQL (optional)
-- [ ] Add mobile-specific endpoints
-- [ ] Test API performance
-
-**Day 104 (5h)** - Push Notifications
-- [ ] Set up Firebase / OneSignal
-- [ ] Implement push notification service
-- [ ] Create notification templates
-- [ ] Add notification preferences
-- [ ] Test notifications
-
-**Day 105 (5h)** - Mobile MVP Planning
-- [ ] Define MVP features
-- [ ] Create development timeline
-- [ ] Assign resources
-- [ ] Set up project tracking
-- [ ] Plan beta testing
-
-#### Week 22: Performance & Scaling (25 hours)
-**Day 106 (5h)** - Database Optimization
-- [ ] Analyze slow queries
-- [ ] Add database indexes
-- [ ] Implement query optimization
-- [ ] Set up read replicas
-- [ ] Test performance improvements
-
-**Day 107 (5h)** - Caching Strategy
-- [ ] Implement Redis caching
-- [ ] Add CDN for static assets
-- [ ] Create cache invalidation strategy
-- [ ] Implement edge caching
-- [ ] Test caching effectiveness
-
-**Day 108 (5h)** - API Optimization
-- [ ] Implement API rate limiting
-- [ ] Add response compression
-- [ ] Optimize payload sizes
-- [ ] Implement pagination everywhere
-- [ ] Test API performance
-
-**Day 109 (5h)** - Frontend Optimization
-- [ ] Implement code splitting
-- [ ] Add lazy loading
-- [ ] Optimize images
-- [ ] Reduce bundle size
-- [ ] Improve Core Web Vitals
-
-**Day 110 (5h)** - Load Testing
-- [ ] Set up load testing tools
-- [ ] Create load test scenarios
-- [ ] Run load tests
-- [ ] Identify bottlenecks
-- [ ] Implement fixes
-
-#### Week 23: Advanced Analytics (25 hours)
-**Day 111 (5h)** - Analytics Infrastructure
-- [ ] Set up advanced analytics
-- [ ] Implement event tracking
-- [ ] Create custom dashboards
-- [ ] Add conversion funnels
-- [ ] Set up A/B testing framework
-
-**Day 112 (5h)** - User Behavior Analytics
-- [ ] Implement session recording
-- [ ] Add heatmaps
-- [ ] Create user journey maps
-- [ ] Analyze drop-off points
-- [ ] Create optimization plan
-
-**Day 113 (5h)** - Business Intelligence
-- [ ] Create BI dashboard
-- [ ] Implement KPI tracking
-- [ ] Add revenue analytics
-- [ ] Create forecasting models
-- [ ] Build executive reports
-
-**Day 114 (5h)** - Marketing Analytics
-- [ ] Track marketing campaigns
-- [ ] Implement attribution modeling
-- [ ] Add ROI tracking
-- [ ] Create marketing reports
-- [ ] Optimize marketing spend
-
-**Day 115 (5h)** - Predictive Analytics
-- [ ] Implement churn prediction
-- [ ] Add demand forecasting
-- [ ] Create price optimization
-- [ ] Implement recommendation scoring
-- [ ] Test predictive models
-
-#### Week 24: Final Polish & Launch (25 hours)
-**Day 116 (5h)** - Bug Bash
-- [ ] Comprehensive bug testing
-- [ ] Fix all critical bugs
-- [ ] Fix high-priority bugs
-- [ ] Test all user flows
-- [ ] Verify all integrations
-
-**Day 117 (5h)** - Documentation
-- [ ] Update API documentation
-- [ ] Create user guides
-- [ ] Write partner documentation
-- [ ] Create video tutorials
-- [ ] Update README
-
-**Day 118 (5h)** - Compliance & Legal
-- [ ] Final legal review
-- [ ] Update terms and policies
-- [ ] Ensure GDPR compliance
-- [ ] Add accessibility features
-- [ ] Conduct compliance audit
-
-**Day 119 (5h)** - Launch Preparation
-- [ ] Create launch checklist
-- [ ] Prepare marketing materials
-- [ ] Set up customer support
-- [ ] Create launch announcement
-- [ ] Schedule launch activities
-
-**Day 120 (5h)** - Official Launch & Celebration
-- [ ] Execute launch plan
-- [ ] Monitor systems
-- [ ] Engage with users
-- [ ] Collect feedback
-- [ ] Celebrate success! 🎉
+#### Week 17-20: Full Launch
+- Public launch
+- Marketing campaigns
+- Partner expansion
+- User acquisition
+- Continuous improvement
 
 ---
 
@@ -1036,107 +618,49 @@ eerie-escapes/
 
 ### Prerequisites
 - Node.js 20+
-- PostgreSQL 15+
-- Redis
-- Git
+- PostgreSQL 15
+- Redis 7
+- Docker (optional)
 
-### Installation
+### Quick Start
 
-1. **Clone the repository**
 ```bash
+# Clone repository
 git clone https://github.com/dannythehat/eerie-escapes.git
 cd eerie-escapes
+
+# Install dependencies
+cd frontend && npm install
+cd ../backend && npm install
+
+# Set up environment variables
+cp frontend/.env.example frontend/.env.local
+cp backend/.env.example backend/.env
+
+# Start with Docker
+docker-compose up -d
+
+# Or start manually
+cd backend && npm run dev  # Terminal 1
+cd frontend && npm run dev # Terminal 2
 ```
 
-2. **Install dependencies**
-```bash
-# Install frontend dependencies
-cd frontend
-npm install
+Visit http://localhost:3000
 
-# Install backend dependencies
-cd ../backend
-npm install
-```
-
-3. **Set up environment variables**
-```bash
-# Copy example env files
-cp .env.example .env
-cd frontend && cp .env.example .env.local
-cd ../backend && cp .env.example .env
-```
-
-4. **Set up database**
-```bash
-cd backend
-npx prisma migrate dev
-npx prisma db seed
-```
-
-5. **Run development servers**
-```bash
-# Terminal 1 - Frontend
-cd frontend
-npm run dev
-
-# Terminal 2 - Backend
-cd backend
-npm run dev
-```
-
-6. **Access the application**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-- API Docs: http://localhost:5000/api-docs
-
-### Using Docker
-
-```bash
-# Start all services
-docker-compose up
-
-# Stop all services
-docker-compose down
-```
+For detailed setup instructions, see [docs/guides/local-development.md](docs/guides/local-development.md)
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 Contact
-
-- **Website**: [EerieEscapes.com](https://eerie-escapes.vercel.app)
-- **Email**: contact@eerieescapes.com
-- **Twitter**: [@EerieEscapes](https://twitter.com/eerieescapes)
-- **Instagram**: [@EerieEscapes](https://instagram.com/eerieescapes)
-
----
-
-## 🙏 Acknowledgments
-
-- Horror travel community for inspiration
-- Open source contributors
-- Early adopters and beta testers
-- Our amazing partners
-
----
-
-**Built with 💀 by horror enthusiasts, for horror enthusiasts**
+**Built with 🦇 by horror enthusiasts, for horror enthusiasts**
