@@ -263,11 +263,11 @@ eerie-escapes/
 - [ ] Add team section
 
 **Day 17 (5h)** - Manual Content Curation
-- [ ] Research and curate 20 horror holidays
-- [ ] Write detailed descriptions for each
-- [ ] Source high-quality images
-- [ ] Create itineraries and day planners
-- [ ] Add pricing and booking information
+- [x] Research and curate 20 horror holidays
+- [x] Write detailed descriptions for each
+- [x] Source high-quality images
+- [x] Create itineraries and day planners
+- [x] Add pricing and booking information
 
 **Day 18 (5h)** - Content Entry & Testing
 - [ ] Enter all 20 holidays into database
