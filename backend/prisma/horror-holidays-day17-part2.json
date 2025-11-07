@@ -1,0 +1,383 @@
+{
+  "holidays": [
+    {
+      "name": "Jack the Ripper Walking Tour",
+      "slug": "jack-ripper-walking-tour-london",
+      "location": "Whitechapel, London, England",
+      "country": "United Kingdom",
+      "theme": "TRUE_CRIME",
+      "description": "Walk in the footsteps of history's most infamous serial killer through the dark alleys of Victorian Whitechapel. This 3-day true crime experience includes expert-led murder site tours, Victorian London immersion, and access to original police files.",
+      "longDescription": "Step into the fog-shrouded streets of 1888 Whitechapel and follow the trail of Jack the Ripper, the world's most notorious unsolved serial killer. Led by a Ripperologist with 20+ years of research, this isn't your typical tourist ghost tour—it's a serious forensic examination of the five canonical murders that terrorized Victorian London. Visit the exact locations where Mary Ann Nichols, Annie Chapman, Elizabeth Stride, Catherine Eddowes, and Mary Jane Kelly met their brutal ends. Examine crime scene photographs, read original police reports, and explore the leading theories about the Ripper's identity. Your tour includes exclusive after-hours access to the Ten Bells pub (the victims' local), a visit to the London Hospital where some victims were examined, and a tour of the City of London Police Museum's Ripper exhibit. Each evening, experience Victorian London through immersive theater, period dining, and atmospheric walks through gaslit streets. This is true crime investigation at its most chilling and historically accurate.",
+      "duration": 3,
+      "difficulty": "EASY",
+      "minAge": 18,
+      "maxGroupSize": 15,
+      "price": 699.00,
+      "currency": "GBP",
+      "rating": 4.8,
+      "reviewCount": 1247,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad",
+        "https://images.unsplash.com/photo-1529655683826-aba9b3e77383",
+        "https://images.unsplash.com/photo-1581974206308-b17e2c0e3b8f"
+      ],
+      "inclusions": [
+        "3 nights accommodation in Whitechapel hotel",
+        "All guided Ripper tours",
+        "Museum and exhibit entries",
+        "Victorian dinner experience",
+        "Crime scene file access",
+        "Expert Ripperologist guide",
+        "Ten Bells pub after-hours access"
+      ],
+      "exclusions": [
+        "Flights to London",
+        "Most meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Victorian London & First Murders",
+          "description": "Afternoon arrival and check-in, evening introduction to Victorian Whitechapel, first murder sites tour (Nichols and Chapman), night visit to Ten Bells pub.",
+          "activities": ["Hotel check-in", "Victorian London intro", "First murders tour", "Ten Bells visit"]
+        },
+        {
+          "day": 2,
+          "title": "The Double Event & Investigation",
+          "description": "Morning visit to London Hospital and police museum, afternoon tour of Stride and Eddowes murder sites, evening Victorian dinner and theater experience.",
+          "activities": ["Hospital visit", "Police museum", "Double event sites", "Victorian dinner"]
+        },
+        {
+          "day": 3,
+          "title": "Mary Kelly & Theories",
+          "description": "Morning tour of Miller's Court (Kelly murder site), afternoon session examining theories and suspects, evening farewell discussion and departure.",
+          "activities": ["Miller's Court", "Theory examination", "Suspect analysis", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October-November or year-round",
+      "tags": ["true-crime", "serial-killer", "victorian", "london", "historical"]
+    },
+    {
+      "name": "Paris Catacombs Night Tour",
+      "slug": "paris-catacombs-night-tour",
+      "location": "Paris, France",
+      "country": "France",
+      "theme": "UNDERGROUND",
+      "description": "Descend into the Empire of the Dead—Paris's legendary catacombs holding the remains of 6 million people. This exclusive 2-day experience includes after-hours access to restricted sections, underground exploration, and the history of Paris's macabre ossuary.",
+      "longDescription": "Venture deep beneath the City of Light into the world's largest ossuary—the Paris Catacombs. This exclusive after-hours experience takes you far beyond the tourist route into restricted sections where few are permitted. Descend 20 meters underground into tunnels lined with the artfully arranged bones and skulls of 6 million Parisians, transferred here from overflowing cemeteries in the late 1700s. Your expert guide—a member of the official catacomb preservation society—will lead you through the official ossuary, then into forbidden zones: the cataflip (an underground beach), secret chambers with revolutionary-era graffiti, and the legendary 'Z' zone where cataphiles (illegal explorers) have created underground art galleries. Learn about the catacomb's role in the French Resistance, its use by smugglers, and the modern-day explorers who risk arrest to map its 300km of tunnels. The highlight is a candlelit ceremony in the Crypt of the Sepulchral Lamp, where you'll experience the catacombs as they were meant to be seen—in flickering darkness, surrounded by millions of the dead.",
+      "duration": 2,
+      "difficulty": "MODERATE",
+      "minAge": 16,
+      "maxGroupSize": 12,
+      "price": 899.00,
+      "currency": "EUR",
+      "rating": 4.9,
+      "reviewCount": 456,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+        "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f",
+        "https://images.unsplash.com/photo-1549144511-f099e773c147"
+      ],
+      "inclusions": [
+        "2 nights central Paris hotel",
+        "Exclusive after-hours catacomb access",
+        "Restricted zone exploration",
+        "Expert catacomb guide",
+        "Safety equipment and lighting",
+        "Historical documentation pack",
+        "Welcome dinner"
+      ],
+      "exclusions": [
+        "Flights to Paris",
+        "Most meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Paris Arrival & Catacomb History",
+          "description": "Afternoon arrival and check-in, evening historical lecture about the catacombs, welcome dinner, night walk through Latin Quarter.",
+          "activities": ["Hotel check-in", "Historical lecture", "Welcome dinner", "Latin Quarter walk"]
+        },
+        {
+          "day": 2,
+          "title": "Deep Catacomb Exploration",
+          "description": "Late afternoon descent into catacombs, exclusive after-hours tour of official ossuary, exploration of restricted zones, candlelit ceremony, midnight return to surface, late night departure.",
+          "activities": ["Catacomb descent", "Ossuary tour", "Restricted zones", "Candlelit ceremony", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "Year-round",
+      "tags": ["catacombs", "underground", "bones", "paris", "france", "ossuary"]
+    },
+    {
+      "name": "New Orleans Voodoo & Cemetery Tour",
+      "slug": "new-orleans-voodoo-cemetery-tour",
+      "location": "New Orleans, Louisiana, USA",
+      "country": "United States",
+      "theme": "OCCULT",
+      "description": "Explore America's most haunted city through its voodoo traditions, above-ground cemeteries, and supernatural history. This 4-day immersion includes voodoo ceremonies, cemetery tours, ghost investigations, and French Quarter dark history.",
+      "longDescription": "New Orleans isn't just haunted—it's possessed. This comprehensive tour takes you deep into the spiritual heart of America's most mystical city, where voodoo, Catholicism, and African traditions blend into something uniquely powerful and terrifying. Your journey begins in the French Quarter, where you'll learn the true history of voodoo from practicing priestesses, not Hollywood myths. Visit the tomb of Marie Laveau, the Voodoo Queen, in St. Louis Cemetery No. 1, and learn the proper way to ask for her blessing. Attend an authentic voodoo ceremony (respectfully, as an observer), complete with drumming, dancing, and spirit possession. Explore the city's famous above-ground 'Cities of the Dead,' where tombs rise like miniature houses due to the high water table. Your nights are spent on ghost tours through the most haunted locations: the LaLaurie Mansion (site of horrific torture), the Sultan's Palace (scene of a mass murder), and the Pharmacy Museum (where voodoo potions were once sold). Experience a traditional New Orleans jazz funeral, dine on gumbo while learning about hoodoo folk magic, and discover why this city's relationship with death is unlike anywhere else on Earth.",
+      "duration": 4,
+      "difficulty": "EASY",
+      "minAge": 18,
+      "maxGroupSize": 16,
+      "price": 1099.00,
+      "currency": "USD",
+      "rating": 4.9,
+      "reviewCount": 723,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19",
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded",
+        "https://images.unsplash.com/photo-1571847490852-7b1f08b1c7e9"
+      ],
+      "inclusions": [
+        "4 nights French Quarter hotel",
+        "All cemetery tours",
+        "Voodoo ceremony attendance",
+        "Ghost tours and investigations",
+        "Voodoo museum entry",
+        "Traditional New Orleans meals",
+        "Expert voodoo and history guides",
+        "Voodoo blessing and protection gris-gris"
+      ],
+      "exclusions": [
+        "Flights to New Orleans",
+        "Some meals",
+        "Alcoholic beverages",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "French Quarter & Voodoo Introduction",
+          "description": "Afternoon arrival, French Quarter walking tour, evening voodoo history lecture, night ghost tour, welcome dinner at historic restaurant.",
+          "activities": ["Hotel check-in", "Quarter tour", "Voodoo lecture", "Ghost tour", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Cemeteries & Marie Laveau",
+          "description": "Morning tour of St. Louis Cemetery No. 1, visit to Marie Laveau's tomb, afternoon voodoo museum and shop tour, evening voodoo ceremony attendance.",
+          "activities": ["Cemetery tour", "Laveau tomb", "Voodoo museum", "Ceremony attendance"]
+        },
+        {
+          "day": 3,
+          "title": "Dark History & Hauntings",
+          "description": "Morning LaLaurie Mansion tour, afternoon Pharmacy Museum and hoodoo history, evening ghost investigation at multiple haunted sites, late night return.",
+          "activities": ["LaLaurie Mansion", "Pharmacy Museum", "Hoodoo history", "Ghost investigation"]
+        },
+        {
+          "day": 4,
+          "title": "Jazz Funeral & Farewell",
+          "description": "Morning traditional jazz funeral experience, afternoon free time in French Quarter, evening farewell dinner with live jazz, night departure.",
+          "activities": ["Jazz funeral", "Free exploration", "Farewell dinner", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "October-November or year-round",
+      "tags": ["voodoo", "cemetery", "haunted", "new-orleans", "occult", "ghost-tour"]
+    },
+    {
+      "name": "Chernobyl Dark Tourism Experience",
+      "slug": "chernobyl-dark-tourism-pripyat",
+      "location": "Pripyat, Chernobyl Exclusion Zone, Ukraine",
+      "country": "Ukraine",
+      "theme": "DARK_TOURISM",
+      "description": "Visit the site of the world's worst nuclear disaster and explore the abandoned city of Pripyat. This 2-day dark tourism experience includes reactor tours, abandoned building exploration, radiation monitoring, and the haunting story of April 26, 1986.",
+      "longDescription": "Step into the apocalypse at Chernobyl, where time stopped on April 26, 1986. This isn't horror fiction—it's the real-life aftermath of humanity's worst nuclear disaster, frozen in time for nearly 40 years. Your journey takes you deep into the 30km Exclusion Zone, past abandoned villages and radiation warning signs, to the ghost city of Pripyat. Walk through the empty streets of a city built for 50,000 people, now reclaimed by nature. Explore the infamous amusement park with its rusting Ferris wheel that never opened, the swimming pool where radiation readings still spike, and the school where children's gas masks litter the floor. Visit the Chernobyl Nuclear Power Plant itself, standing in the shadow of the New Safe Confinement structure that entombs Reactor 4. Your expert guide—a former plant worker—shares firsthand accounts of the disaster, the heroic liquidators who sacrificed their lives, and the ongoing containment efforts. Throughout your tour, carry a Geiger counter that clicks constantly, reminding you that invisible danger still lurks. This is dark tourism at its most profound—a sobering reminder of human hubris and the fragility of our technological civilization.",
+      "duration": 2,
+      "difficulty": "MODERATE",
+      "minAge": 18,
+      "maxGroupSize": 10,
+      "price": 599.00,
+      "currency": "USD",
+      "rating": 4.8,
+      "reviewCount": 892,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1590736969955-71cc94901144",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+        "https://images.unsplash.com/photo-1565031491910-e57fac031c41"
+      ],
+      "inclusions": [
+        "2 nights Kiev hotel accommodation",
+        "All Exclusion Zone permits and fees",
+        "Transportation to/from Chernobyl",
+        "Expert guide (former plant worker)",
+        "Personal Geiger counter",
+        "Radiation safety briefing",
+        "All site access fees",
+        "Radiation certificate"
+      ],
+      "exclusions": [
+        "Flights to Kiev",
+        "Meals",
+        "Personal expenses",
+        "Travel insurance",
+        "Medical clearance (required)"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Kiev Arrival & Preparation",
+          "description": "Morning arrival in Kiev, afternoon radiation safety briefing and historical lecture, evening free time, overnight in Kiev hotel.",
+          "activities": ["Kiev arrival", "Safety briefing", "Historical lecture", "Free time"]
+        },
+        {
+          "day": 2,
+          "title": "Chernobyl Exclusion Zone Tour",
+          "description": "Early morning departure to Exclusion Zone, checkpoint entry, visit to Chernobyl town, tour of Nuclear Power Plant exterior, exploration of Pripyat city (amusement park, school, hospital, swimming pool), late afternoon return to Kiev, evening departure.",
+          "activities": ["Zone entry", "Plant tour", "Pripyat exploration", "Radiation monitoring", "Kiev return", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "April-October",
+      "tags": ["dark-tourism", "nuclear", "abandoned", "chernobyl", "pripyat", "ukraine"]
+    },
+    {
+      "name": "Transylvania Vampire Tour",
+      "slug": "transylvania-vampire-tour-romania",
+      "location": "Transylvania, Romania",
+      "country": "Romania",
+      "theme": "VAMPIRE",
+      "description": "Journey through the heart of vampire country on this comprehensive 7-day tour of Transylvania. Visit multiple castles, explore vampire folklore, meet local storytellers, and discover the real history behind the Dracula legend.",
+      "longDescription": "Embark on the ultimate vampire pilgrimage through the misty mountains and medieval villages of Transylvania. This week-long odyssey takes you far beyond Bran Castle to explore the entire vampire mythology of Romania. Your journey begins in Bucharest, then winds through the Carpathian Mountains to Brasov, Sighisoara (Vlad's birthplace), Sibiu, and Cluj-Napoca. Visit not just one, but five legendary castles: Bran (Dracula's Castle), Peles (the most beautiful castle in Romania), Corvin (the Gothic masterpiece), Fagaras (the fortress of Transylvania), and the ruins of Poenari (Vlad's real stronghold). Meet with Romanian folklorists who share authentic vampire legends—not Hollywood versions, but the real strigoi and moroi of Romanian tradition. Explore fortified churches where villagers once hid from invaders, visit the Merry Cemetery where death is celebrated with humor, and attend a traditional Romanian feast with folk music and dancing. Each evening brings new vampire tales around the fire, and you'll learn about the historical Vlad III Dracula—the prince whose brutal tactics inspired Bram Stoker's immortal vampire. This is vampire tourism done comprehensively, authentically, and unforgettably.",
+      "duration": 7,
+      "difficulty": "MODERATE",
+      "minAge": 16,
+      "maxGroupSize": 18,
+      "price": 2299.00,
+      "currency": "EUR",
+      "rating": 4.9,
+      "reviewCount": 567,
+      "featured": true,
+      "images": [
+        "https://images.unsplash.com/photo-1565031491910-e57fac031c41",
+        "https://images.unsplash.com/photo-1604869515882-4d10fa4b0492",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96"
+      ],
+      "inclusions": [
+        "7 nights accommodation (mix of hotels and castle stays)",
+        "All castle and fortress entries",
+        "Transportation throughout Transylvania",
+        "Expert vampire folklore guide",
+        "Traditional Romanian meals",
+        "Folklore evening sessions",
+        "All guided tours",
+        "Vampire mythology book"
+      ],
+      "exclusions": [
+        "International flights",
+        "Some meals",
+        "Personal expenses",
+        "Travel insurance",
+        "Alcoholic beverages"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Bucharest Arrival",
+          "description": "Arrival in Bucharest, city tour including Palace of Parliament, evening vampire folklore introduction, welcome dinner.",
+          "activities": ["Bucharest arrival", "City tour", "Folklore intro", "Welcome dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Peles Castle & Brasov",
+          "description": "Morning visit to stunning Peles Castle, afternoon transfer to Brasov, evening walking tour of medieval Brasov, overnight in Brasov.",
+          "activities": ["Peles Castle", "Brasov transfer", "Medieval tour", "Brasov overnight"]
+        },
+        {
+          "day": 3,
+          "title": "Bran Castle & Vampire Legends",
+          "description": "Full day at Bran Castle with in-depth tour, vampire folklore session, evening traditional dinner, overnight near Bran.",
+          "activities": ["Bran Castle tour", "Folklore session", "Traditional dinner"]
+        },
+        {
+          "day": 4,
+          "title": "Sighisoara - Vlad's Birthplace",
+          "description": "Morning transfer to Sighisoara, explore medieval citadel, visit Vlad's birth house, afternoon historical lecture, evening in citadel.",
+          "activities": ["Sighisoara transfer", "Citadel exploration", "Vlad's house", "Historical lecture"]
+        },
+        {
+          "day": 5,
+          "title": "Poenari Fortress & Sibiu",
+          "description": "Morning climb to Poenari Fortress ruins (Vlad's real castle), afternoon transfer to Sibiu, evening exploration of Sibiu's Gothic architecture.",
+          "activities": ["Poenari climb", "Sibiu transfer", "Gothic architecture tour"]
+        },
+        {
+          "day": 6,
+          "title": "Corvin Castle & Cluj",
+          "description": "Morning visit to Gothic Corvin Castle, afternoon transfer to Cluj-Napoca, evening city tour and farewell dinner.",
+          "activities": ["Corvin Castle", "Cluj transfer", "City tour", "Farewell dinner"]
+        },
+        {
+          "day": 7,
+          "title": "Departure",
+          "description": "Morning free time in Cluj, afternoon transfer to airport, departure.",
+          "activities": ["Free time", "Airport transfer", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "May-October",
+      "tags": ["vampire", "transylvania", "castles", "dracula", "romania", "folklore"]
+    },
+    {
+      "name": "Aokigahara Forest Guided Trek",
+      "slug": "aokigahara-forest-suicide-forest-japan",
+      "location": "Mount Fuji, Japan",
+      "country": "Japan",
+      "theme": "DARK_TOURISM",
+      "description": "Trek through Japan's infamous 'Suicide Forest' with an expert guide. This sensitive 2-day experience explores the forest's dark reputation, Japanese death culture, mental health awareness, and the natural beauty of this haunting location.",
+      "longDescription": "Aokigahara Forest, known worldwide as the 'Suicide Forest,' is one of Japan's most controversial and misunderstood locations. This respectful, educational trek approaches the forest not as a macabre tourist attraction, but as a place to understand Japanese attitudes toward death, mental health, and the intersection of natural beauty and human tragedy. Your expert guide—a local who has worked with forest patrol and suicide prevention—leads you through the dense, eerily quiet forest at the base of Mount Fuji. The volcanic rock beneath creates a unique ecosystem where compasses malfunction and sound is absorbed, creating an unsettling silence. You'll learn about the forest's history, from its association with ubasute (the practice of abandoning elderly relatives) to its modern reputation. The tour includes a visit to the Ice Caves, discussion of Japanese death culture and the concept of 'forest bathing' (shinrin-yoku), and a respectful examination of why this location has become associated with suicide. Signs throughout the forest encourage visitors to seek help, and your guide shares stories of successful interventions. This is dark tourism handled with sensitivity, education, and respect—a chance to understand a complex issue while experiencing one of Japan's most unique natural environments.",
+      "duration": 2,
+      "difficulty": "MODERATE",
+      "minAge": 21,
+      "maxGroupSize": 8,
+      "price": 799.00,
+      "currency": "USD",
+      "rating": 4.6,
+      "reviewCount": 234,
+      "featured": false,
+      "images": [
+        "https://images.unsplash.com/photo-1528164344705-47542687000d",
+        "https://images.unsplash.com/photo-1480796927426-f609979314bd",
+        "https://images.unsplash.com/photo-1545569341-9eb8b30979d9"
+      ],
+      "inclusions": [
+        "2 nights accommodation near Mount Fuji",
+        "Expert local guide",
+        "Forest trek and Ice Caves visit",
+        "Mental health awareness session",
+        "Transportation to/from forest",
+        "Traditional Japanese meals",
+        "Cultural education materials"
+      ],
+      "exclusions": [
+        "Flights to Tokyo",
+        "Transportation to Mount Fuji area",
+        "Some meals",
+        "Personal expenses",
+        "Travel insurance"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrival & Cultural Education",
+          "description": "Afternoon arrival at Mount Fuji area, check-in to traditional ryokan, evening session on Japanese death culture and forest history, traditional dinner.",
+          "activities": ["Ryokan check-in", "Cultural education", "Forest history", "Traditional dinner"]
+        },
+        {
+          "day": 2,
+          "title": "Aokigahara Forest Trek",
+          "description": "Morning forest trek with expert guide, visit to Ice Caves, respectful discussion of forest's reputation, afternoon mental health awareness session, evening departure.",
+          "activities": ["Forest trek", "Ice Caves", "Educational discussion", "Awareness session", "Departure"]
+        }
+      ],
+      "bestTimeToVisit": "April-November",
+      "tags": ["dark-tourism", "forest", "japan", "mental-health", "cultural", "educational"]
+    }
+  ]
+}
